@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${PROJECT_NAME:-php84}_web
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-8080}:80"
+    environment:
+      - PHP_MEMORY_LIMIT=${PHP_MEMORY_LIMIT:-256M}
+      - PHP_MAX_EXECUTION_TIME=${PHP_MAX_EXECUTION_TIME:-300}
+      - PHP_UPLOAD_MAX_SIZE=${PHP_UPLOAD_MAX_SIZE:-64M}
+      - DB_HOST=mariadb
+      - DB_PORT=3306
+      - DB_NAME=${DB_NAME:-app_database}
+      - DB_USER=${DB_USER:-app_user}
+      - DB_PASSWORD=${DB_PASSWORD:-Bateau123}
+    volumes:
+      - ./web:/var/www/html:rw
+      - ./php.ini:/usr/local/etc/php/conf.d/custom.ini:ro
+      - ./apache/vhost.conf:/etc/apache2/sites-available/000-default.conf:ro
+    depends_on:
+      - mariadb
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  mariadb:
+    image: mariadb:11.4
+    container_name: ${PROJECT_NAME:-php84}_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-Bateau123}
+      MYSQL_DATABASE: ${DB_NAME:-app_database}
+      MYSQL_USER: ${DB_USER:-app_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-Bateau123}
+    volumes:
+      - ./data/mariadb:/var/lib/mysql
+    ports:
+      - "${DB_PORT_MAPPING:-3307}:3306"
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-Bateau123}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: ${PROJECT_NAME:-php84}_pma
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      PMA_USER: ${DB_USER:-app_user}
+      PMA_PASSWORD: ${DB_PASSWORD:-Bateau123}
+      UPLOAD_LIMIT: ${PHP_UPLOAD_MAX_SIZE:-64M}
+    ports:
+      - "${PMA_PORT:-8081}:80"
+    depends_on:
+      - mariadb
+    networks:
+      - app_network
+    profiles:
+      - tools
+
+networks:
+  app_network:
+    driver: bridge
