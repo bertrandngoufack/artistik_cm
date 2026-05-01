@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1756280931;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:3:{s:4:"name";s:5:"admin";s:11:"description";s:35:"Administrateur système mis à jour";s:11:"permissions";a:3:{i:0;s:13:"economat_view";i:1;s:14:"scolarite_view";i:2;s:12:"examens_view";}}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"new";s:5:"error";s:3:"new";}error|s:30:"Erreur lors de la mise à jour";

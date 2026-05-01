@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1755957462;error|s:146:"Erreur lors de la récupération des rappels: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'lycol_db.payment_reminders' doesn't exist";__ci_vars|a:1:{s:5:"error";s:3:"new";}

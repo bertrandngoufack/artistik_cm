@@ -1,0 +1,356 @@
+/* KISSAI SCHOOL - LyCol System - CSS Personnalisé */
+
+:root {
+    --primary-color: #3273dc;
+    --secondary-color: #209cee;
+    --success-color: #23d160;
+    --warning-color: #ffdd57;
+    --danger-color: #ff3860;
+    --dark-color: #363636;
+    --light-color: #f5f5f5;
+}
+
+/* Styles généraux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+}
+
+/* Header et navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+/* Cards et conteneurs */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Boutons personnalisés */
+.button.is-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.button.is-primary:hover {
+    background-color: #2366d1;
+    border-color: #2366d1;
+}
+
+/* Tableaux */
+.table {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+/* Formulaires */
+.input:focus, .textarea:focus, .select select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+/* Dashboard */
+.dashboard-stats {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.dashboard-stats .title {
+    color: white;
+}
+
+/* License status */
+.license-status {
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.license-status.active {
+    background-color: #f0f8ff;
+    border-left: 4px solid var(--success-color);
+}
+
+.license-status.expired {
+    background-color: #fff5f5;
+    border-left: 4px solid var(--danger-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .dashboard-stats {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Correction des problèmes de superposition */
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+}
+
+.pagination {
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.box {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.columns {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.column {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Correction pour les éléments avec largeur 100% */
+.table {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.buttons {
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.button {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Amélioration de la pagination */
+.pagination-list {
+    max-width: 100%;
+    overflow-x: auto;
+    flex-wrap: wrap;
+}
+
+.pagination-link,
+.pagination-previous,
+.pagination-next {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Correction pour les statistiques */
+.box.has-text-centered {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.box.has-text-centered .title {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Correction pour les informations générales */
+.field {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.field .label {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.field .control {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Correction pour les boutons d'action */
+.level-right .buttons {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.level-right .button {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive amélioré pour les petits écrans */
+@media (max-width: 480px) {
+    .level {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .level-left,
+    .level-right {
+        margin: 0.5rem 0;
+    }
+    
+    .buttons {
+        justify-content: center;
+    }
+    
+    .pagination-list {
+        justify-content: center;
+    }
+    
+    .table-container {
+        font-size: 0.875rem;
+    }
+    
+    .box.has-text-centered .title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Correction spécifique pour la page de détails d'examen */
+.exam-details-page .title {
+    margin-bottom: 1rem !important;
+    position: relative;
+    z-index: 1;
+}
+
+.exam-details-page .subtitle {
+    margin-top: 0.5rem !important;
+    margin-bottom: 2rem !important;
+    position: relative;
+    z-index: 1;
+}
+
+.exam-details-page .level {
+    margin-bottom: 2rem !important;
+    position: relative;
+    z-index: 1;
+}
+
+.exam-details-page .box {
+    margin-bottom: 2rem !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Correction pour éviter la superposition des titres */
+.exam-details-page h1.title {
+    clear: both;
+    display: block;
+    margin-bottom: 1.5rem !important;
+}
+
+.exam-details-page h3.title {
+    clear: both;
+    display: block;
+    margin-bottom: 1rem !important;
+}
+
+/* Correction pour les icônes dans les titres */
+.exam-details-page .title .icon {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Correction pour l'espacement des sections */
+.exam-details-page .box + .box {
+    margin-top: 2rem;
+}
+
+/* Correction pour la pagination */
+.exam-details-page .pagination {
+    margin-top: 2rem;
+    clear: both;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading spinner */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Notifications */
+.notification {
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.notification.is-success {
+    background-color: #f0f8ff;
+    color: var(--success-color);
+    border-left: 4px solid var(--success-color);
+}
+
+.notification.is-warning {
+    background-color: #fffbf0;
+    color: #b8860b;
+    border-left: 4px solid var(--warning-color);
+}
+
+.notification.is-danger {
+    background-color: #fff5f5;
+    color: var(--danger-color);
+    border-left: 4px solid var(--danger-color);
+}
+
+

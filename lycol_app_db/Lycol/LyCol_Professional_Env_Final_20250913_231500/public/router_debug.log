@@ -1,0 +1,53 @@
+2025-08-23 14:39:24 - Début de requête
+2025-08-23 14:39:24 - URI: /admin/dashboard, Path: /admin/dashboard
+2025-08-23 14:39:24 - Passage à CodeIgniter
+2025-08-23 14:39:24 - Début de requête
+2025-08-23 14:39:24 - URI: /index.php?debugbar, Path: /index.php
+2025-08-23 14:39:24 - Passage à CodeIgniter
+2025-08-23 14:39:24 - Début de requête
+2025-08-23 14:39:24 - URI: /assets/bulma/css/bulma.min.css, Path: /assets/bulma/css/bulma.min.css
+2025-08-23 14:39:24 - Asset statique détecté: css
+2025-08-23 14:39:24 - Chemin asset: /home/ngoufack_b/Téléchargements/codeigniter4-framework-68d1a58/public/assets/assets/bulma/css/bulma.min.css
+2025-08-23 14:39:24 - Fichier existe: NON
+2025-08-23 14:39:24 - Fichier non trouvé
+2025-08-23 14:39:24 - Passage à CodeIgniter
+2025-08-23 14:39:24 - Début de requête
+2025-08-23 14:39:24 - URI: /assets/bulma/js/bulma.js, Path: /assets/bulma/js/bulma.js
+2025-08-23 14:39:24 - Asset statique détecté: js
+2025-08-23 14:39:24 - Chemin asset: /home/ngoufack_b/Téléchargements/codeigniter4-framework-68d1a58/public/assets/assets/bulma/js/bulma.js
+2025-08-23 14:39:24 - Fichier existe: NON
+2025-08-23 14:39:24 - Fichier non trouvé
+2025-08-23 14:39:24 - Passage à CodeIgniter
+2025-08-23 14:39:24 - Début de requête
+2025-08-23 14:39:24 - URI: /index.php?debugbar_time=1755959964.620100, Path: /index.php
+2025-08-23 14:39:24 - Passage à CodeIgniter
+2025-08-23 14:39:29 - Début de requête
+2025-08-23 14:39:29 - URI: /assets/bulma/css/bulma.min.css, Path: /assets/bulma/css/bulma.min.css
+2025-08-23 14:39:29 - Asset statique détecté: css
+2025-08-23 14:39:29 - Chemin asset: /home/ngoufack_b/Téléchargements/codeigniter4-framework-68d1a58/public/assets/assets/bulma/css/bulma.min.css
+2025-08-23 14:39:29 - Fichier existe: NON
+2025-08-23 14:39:29 - Fichier non trouvé
+2025-08-23 14:39:29 - Passage à CodeIgniter
+2025-08-23 14:39:54 - Début de requête
+2025-08-23 14:39:54 - URI: /admin/dashboard, Path: /admin/dashboard
+2025-08-23 14:39:54 - Passage à CodeIgniter
+2025-08-23 14:39:55 - Début de requête
+2025-08-23 14:39:55 - URI: /index.php?debugbar, Path: /index.php
+2025-08-23 14:39:55 - Passage à CodeIgniter
+2025-08-23 14:39:55 - Début de requête
+2025-08-23 14:39:55 - URI: /assets/bulma/css/bulma.min.css, Path: /assets/bulma/css/bulma.min.css
+2025-08-23 14:39:55 - Asset statique détecté: css
+2025-08-23 14:39:55 - Chemin asset: /home/ngoufack_b/Téléchargements/codeigniter4-framework-68d1a58/public/assets/assets/bulma/css/bulma.min.css
+2025-08-23 14:39:55 - Fichier existe: NON
+2025-08-23 14:39:55 - Fichier non trouvé
+2025-08-23 14:39:55 - Passage à CodeIgniter
+2025-08-23 14:39:55 - Début de requête
+2025-08-23 14:39:55 - URI: /assets/bulma/js/bulma.js, Path: /assets/bulma/js/bulma.js
+2025-08-23 14:39:55 - Asset statique détecté: js
+2025-08-23 14:39:55 - Chemin asset: /home/ngoufack_b/Téléchargements/codeigniter4-framework-68d1a58/public/assets/assets/bulma/js/bulma.js
+2025-08-23 14:39:55 - Fichier existe: NON
+2025-08-23 14:39:55 - Fichier non trouvé
+2025-08-23 14:39:55 - Passage à CodeIgniter
+2025-08-23 14:39:55 - Début de requête
+2025-08-23 14:39:55 - URI: /index.php?debugbar_time=1755959994.899618, Path: /index.php
+2025-08-23 14:39:55 - Passage à CodeIgniter

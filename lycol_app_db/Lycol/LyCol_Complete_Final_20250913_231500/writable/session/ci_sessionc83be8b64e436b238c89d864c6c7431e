@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1755975674;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:6:{s:10:"teacher_id";s:1:"1";s:8:"class_id";s:1:"1";s:10:"subject_id";s:1:"1";s:12:"is_principal";s:1:"0";s:13:"academic_year";s:9:"2024-2025";s:9:"is_active";s:1:"1";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"new";s:5:"error";s:3:"new";}error|s:31:"Cette assignation existe déjà";
