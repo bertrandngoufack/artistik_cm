@@ -1,0 +1,90 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable GetResponse plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-getresponse\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-06-07T14:13:35+00:00\n"
+"PO-Revision-Date: 2024-08-22 14:01\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-getresponse\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /[Strategy11.formidable-getresponse] master/languages/formidable-getresponse.pot\n"
+"X-Crowdin-File-ID: 2887\n"
+"Language: de_DE\n"
+
+#. Plugin Name of the plugin
+#: formidable-getresponse.php
+msgid "Formidable GetResponse"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-getresponse.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-getresponse.php
+msgid "Add users to GetResponse campaigns from your Formidable forms"
+msgstr ""
+
+#. Author of the plugin
+#: formidable-getresponse.php
+msgid "Strategy11"
+msgstr "Strategie11"
+
+#: controllers/FrmGetResponseSettingsController.php:40
+msgid "Settings Saved"
+msgstr "Die Einstellungen wurden gespeichert"
+
+#: models/FrmGetResponseAction.php:17
+msgid "Add to GetResponse"
+msgstr ""
+
+#: views/action-settings/getresponse_options.php:25
+msgid "List"
+msgstr "Liste"
+
+#. translators: %1$s: Start link HTML %2$s: end link HTML
+#: views/action-settings/getresponse_options.php:40
+msgid "No GetResponse lists found. Please %1$scheck your API key%1$s."
+msgstr ""
+
+#: views/action-settings/_match_fields.php:13
+msgid "First Name"
+msgstr "Vorname"
+
+#: views/action-settings/_match_fields.php:31
+msgid "Last Name"
+msgstr "Nachname"
+
+#: views/action-settings/_match_fields.php:47
+msgid "Email"
+msgstr "E-Mail"
+
+#: views/action-settings/_match_fields.php:88
+msgid "Autoresponder Cycle Day"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:89
+msgid "If this list begins a multi-day autoresponder, you may start this contact in the middle of the campaign. Leave blank to start at the beginning of the autoresponder email campaign."
+msgstr ""
+
+#. translators: %1$s: Start link HTML %2$s: end link HTML
+#: views/settings/form.php:13
+msgid "API keys can be found at %1$sGetResponse Integrations and API%2$s"
+msgstr ""
+
+#: views/settings/form.php:21
+msgid "GetResponse API Key"
+msgstr ""
+

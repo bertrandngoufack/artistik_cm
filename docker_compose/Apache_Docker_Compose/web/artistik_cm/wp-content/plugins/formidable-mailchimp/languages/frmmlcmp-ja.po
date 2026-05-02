@@ -1,0 +1,121 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable Mailchimp plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-mailchimp\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-09T16:08:21+00:00\n"
+"PO-Revision-Date: 2024-08-09 16:26\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: frmmlcmp\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /[Strategy11.formidable-mailchimp] master/languages/frmmlcmp.pot\n"
+"X-Crowdin-File-ID: 2472\n"
+"Language: ja_JP\n"
+
+#. Plugin Name of the plugin
+#: formidable-mailchimp.php
+msgid "Formidable Mailchimp"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-mailchimp.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-mailchimp.php
+msgid "Add new Mailchimp contacts from your Formidable forms"
+msgstr ""
+
+#. Author of the plugin
+#: formidable-mailchimp.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#: controllers/FrmMlcmpAppController.php:22
+msgid "You are running an outdated version of Formidable. This plugin may not work correctly if you do not update Formidable."
+msgstr "Formidable のバージョンが古いようです。Formidable を更新しない場合、このプラグインが適切に動作しない可能性があります。"
+
+#: controllers/FrmMlcmpAppController.php:587
+#: controllers/FrmMlcmpAppController.php:591
+msgid "You had an error communicating with the Mailchimp API."
+msgstr ""
+
+#: controllers/FrmMlcmpAppController.php:665
+msgid "Mailchimp:"
+msgstr "Mailchimp:"
+
+#: controllers/FrmMlcmpAppController.php:688
+msgid "You had an HTTP connection error"
+msgstr "HTTP 接続エラーが発生しました"
+
+#: controllers/FrmMlcmpSettingsController.php:106
+msgid "You do not have permission to access this page."
+msgstr "このページにアクセスする権限がありません。"
+
+#: controllers/FrmMlcmpSettingsController.php:111
+msgid "No api key code was sent"
+msgstr "API キーコードが送信されませんでした"
+
+#: models/FrmMlcmpAction.php:17
+msgid "Add to Mailchimp"
+msgstr ""
+
+#: views/action-settings/address_action_setting.php:8
+msgid "Action"
+msgstr "アクション"
+
+#: views/action-settings/address_action_setting.php:13
+msgid "Subscribe or update user"
+msgstr ""
+
+#: views/action-settings/address_action_setting.php:16
+msgid "Unsubscribe address"
+msgstr ""
+
+#: views/action-settings/mailchimp_options.php:4
+msgid "List"
+msgstr "リスト"
+
+#: views/action-settings/mailchimp_options.php:15
+msgid "No Mailchimp mailing lists found"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:93
+msgid "Marketing Preferences"
+msgstr "マーケティング設定"
+
+#: views/action-settings/_match_fields.php:123
+msgid "Opt In"
+msgstr "オプトイン"
+
+#: views/action-settings/_match_fields.php:125
+msgid "Single"
+msgstr "単一"
+
+#: views/action-settings/_match_fields.php:126
+msgid "Double"
+msgstr "二重線"
+
+#: views/notices/update_database.php:4
+msgid "Your Formidable Mailchimp database needs to be updated.%1$sPlease deactivate and reactivate the plugin or %2$sUpdate Now%3$s"
+msgstr ""
+
+#: views/notices/update_formidable.php:4
+msgid "Formidable Mailchimp requires that Formidable Pro version 2.0 or greater be installed. Until then, keep Formidable Mailchimp activated only to continue enjoying this insightful message."
+msgstr ""
+
+#: views/settings/form.php:3
+msgid "API Key"
+msgstr "API キー"
+

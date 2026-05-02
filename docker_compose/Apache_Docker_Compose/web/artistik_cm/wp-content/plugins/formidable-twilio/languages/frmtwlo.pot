@@ -1,0 +1,141 @@
+# Copyright (C) 2020 Strategy11
+# This file is distributed under the same license as the Formidable Twilio plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formidable Twilio 1.09\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-twilio\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-10-30T16:42:14+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.1.0\n"
+"X-Domain: frmtwlo\n"
+
+#. Plugin Name of the plugin
+msgid "Formidable Twilio"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://formidableforms.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Accept SMS votes for a poll or send texts from forms"
+msgstr ""
+
+#. Author of the plugin
+msgid "Strategy11"
+msgstr ""
+
+#: models/FrmTwloAction.php:14
+#: controllers/FrmTwloSettingsController.php:66
+msgid "Send Twilio SMS"
+msgstr ""
+
+#: models/FrmTwloAction.php:22
+msgid "Test number: +1 (500) 555-0006"
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:45
+msgid "Sorry, your vote doesn't appear to be authentic."
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:49
+msgid "Sorry, I didn't understand that."
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:52
+msgid "Sorry, I wasn't able to save your vote."
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:231
+msgid "The Twilio API has not been set up in the Global Settings"
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:258
+msgid "There was a problem with your Twilio submission."
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:261
+msgid "You had an error communicating with Twilio's API."
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:266
+msgid "You had an HTTP error connecting to Twilio's API"
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:276
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:313
+msgid "Sorry, there was an error saving your vote."
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:391
+msgid "Thank you, your vote has been recorded."
+msgstr ""
+
+#: controllers/FrmTwloAppController.php:398
+msgid "Sorry, you can only vote once."
+msgstr ""
+
+#: controllers/FrmTwloSettingsController.php:31
+msgid "Settings Saved"
+msgstr ""
+
+#: views/options.php:6
+msgid "Send this notification as an SMS message via Twilio"
+msgstr ""
+
+#: views/options.php:9
+msgid "Sending Number"
+msgstr ""
+
+#: views/options.php:11
+msgid "Add your phone number field(s) to the email recipients box above"
+msgstr ""
+
+#: views/_twilio_action.php:7
+msgid "The Twilio API has not been set up yet."
+msgstr ""
+
+#: views/_twilio_action.php:10
+msgid "Set up Twilo API"
+msgstr ""
+
+#: views/_twilio_action.php:23
+msgid "To"
+msgstr ""
+
+#: views/_twilio_action.php:29
+msgid "From"
+msgstr ""
+
+#: views/_twilio_action.php:41
+msgid "Use a different Twilio number"
+msgstr ""
+
+#: views/_twilio_action.php:54
+msgid "Warning: only add a custom number if you know what you are doing. Only Twilio numbers will send messages."
+msgstr ""
+
+#: views/_twilio_action.php:59
+msgid "Message"
+msgstr ""
+
+#: views/form.php:3
+msgid "Account SID"
+msgstr ""
+
+#: views/form.php:9
+msgid "Auth Token"
+msgstr ""
+
+#: views/form.php:16
+msgid "Get API Credentials from Twilio.com"
+msgstr ""

@@ -1,72 +1,109 @@
-version: '3.8'
+name: ${COMPOSE_PROJECT_NAME:-artistik-php}
 
 services:
   web:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ${PROJECT_NAME:-php84}_web
-    restart: unless-stopped
+      args:
+        PHP_BASE_IMAGE: ${PHP_BASE_IMAGE:-php:8.4-apache-bookworm}
+        INSTALL_WPCLI: ${INSTALL_WPCLI:-1}
+    image: ${WEB_IMAGE:-artistik-php-web:local}
+    container_name: ${COMPOSE_PROJECT_NAME:-artistik-php}_web
+    restart: ${RESTART_POLICY:-unless-stopped}
+    env_file:
+      - ${ENV_FILE:-.env}
     ports:
       - "${HTTP_PORT:-8080}:80"
     environment:
-      - PHP_MEMORY_LIMIT=${PHP_MEMORY_LIMIT:-256M}
-      - PHP_MAX_EXECUTION_TIME=${PHP_MAX_EXECUTION_TIME:-300}
-      - PHP_UPLOAD_MAX_SIZE=${PHP_UPLOAD_MAX_SIZE:-64M}
-      - DB_HOST=mariadb
-      - DB_PORT=3306
-      - DB_NAME=${DB_NAME:-app_database}
-      - DB_USER=${DB_USER:-app_user}
-      - DB_PASSWORD=${DB_PASSWORD:-Bateau123}
+      APACHE_DOCUMENT_ROOT: ${APACHE_DOCUMENT_ROOT:-/var/www/html}
+      APACHE_SERVER_ADMIN: ${APACHE_SERVER_ADMIN:-webmaster@localhost}
+      APACHE_ERROR_DOCUMENT_404: ${APACHE_ERROR_DOCUMENT_404:-/index.php}
+      APACHE_VHOST_TEMPLATE: /etc/apache2/templates/000-default.conf.template
+      PHP_MEMORY_LIMIT: ${PHP_MEMORY_LIMIT:-256M}
+      PHP_MAX_EXECUTION_TIME: ${PHP_MAX_EXECUTION_TIME:-300}
+      PHP_MAX_INPUT_TIME: ${PHP_MAX_INPUT_TIME:-300}
+      PHP_UPLOAD_MAX_SIZE: ${PHP_UPLOAD_MAX_SIZE:-64M}
+      PHP_POST_MAX_SIZE: ${PHP_POST_MAX_SIZE:-64M}
+      PHP_MAX_INPUT_VARS: ${PHP_MAX_INPUT_VARS:-3000}
+      PHP_DATE_TIMEZONE: ${PHP_DATE_TIMEZONE:-UTC}
+      PHP_DISPLAY_ERRORS: ${PHP_DISPLAY_ERRORS:-On}
+      PHP_ERROR_REPORTING: ${PHP_ERROR_REPORTING:-E_ALL}
+      PHP_LOG_ERRORS: ${PHP_LOG_ERRORS:-On}
+      PHP_OPCACHE_MEMORY_CONSUMPTION: ${PHP_OPCACHE_MEMORY_CONSUMPTION:-256}
+      PHP_OPCACHE_INTERNED_STRINGS_BUFFER: ${PHP_OPCACHE_INTERNED_STRINGS_BUFFER:-16}
+      PHP_OPCACHE_MAX_ACCELERATED_FILES: ${PHP_OPCACHE_MAX_ACCELERATED_FILES:-10000}
+      PHP_OPCACHE_REVALIDATE_FREQ: ${PHP_OPCACHE_REVALIDATE_FREQ:-2}
+      COMPOSER_INSTALL_ON_START: ${COMPOSER_INSTALL_ON_START:-1}
+      COMPOSER_INSTALL_DEV: ${COMPOSER_INSTALL_DEV:-0}
+      CREATE_DEFAULT_INDEX: ${CREATE_DEFAULT_INDEX:-1}
+      DB_HOST: ${DB_HOST:-mariadb}
+      DB_PORT: ${DB_PORT:-3306}
+      DB_NAME: ${DB_NAME:-app_database}
+      DB_USER: ${DB_USER:-app_user}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      ENSURE_MYSQL_DATABASE: ${ENSURE_MYSQL_DATABASE:-1}
+      WP_PUBLIC_URL: ${WP_PUBLIC_URL:-}
+      HEALTHCHECK_PATH: ${HEALTHCHECK_PATH:-/}
     volumes:
-      - ./web:/var/www/html:rw
-      - ./php.ini:/usr/local/etc/php/conf.d/custom.ini:ro
-      - ./apache/vhost.conf:/etc/apache2/sites-available/000-default.conf:ro
+      - ${WEB_MOUNT:-./web}:/var/www/html:rw
+      - ${PHP_CUSTOM_INI:-./php.ini}:/usr/local/etc/php/conf.d/10-user-custom.ini:ro
+      - ${APACHE_VHOST_TEMPLATE:-./apache/vhost.conf.template}:/etc/apache2/templates/000-default.conf.template:ro
     depends_on:
-      - mariadb
+      mariadb:
+        condition: service_healthy
     networks:
       - app_network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1${HEALTHCHECK_PATH:-/}"]
+      interval: ${HEALTHCHECK_INTERVAL:-30s}
+      timeout: ${HEALTHCHECK_TIMEOUT:-10s}
+      retries: ${HEALTHCHECK_RETRIES:-3}
+      start_period: ${HEALTHCHECK_START_PERIOD:-10s}
 
   mariadb:
-    image: mariadb:11.4
-    container_name: ${PROJECT_NAME:-php84}_db
-    restart: unless-stopped
+    image: ${MARIADB_IMAGE:-mariadb:11.4}
+    container_name: ${COMPOSE_PROJECT_NAME:-artistik-php}_db
+    restart: ${RESTART_POLICY:-unless-stopped}
+    env_file:
+      - ${ENV_FILE:-.env}
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-Bateau123}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME:-app_database}
       MYSQL_USER: ${DB_USER:-app_user}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-Bateau123}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MARIADB_AUTO_UPGRADE: ${MARIADB_AUTO_UPGRADE:-1}
     volumes:
-      - ./data/mariadb:/var/lib/mysql
+      - ${MARIADB_DATA_DIR:-./data/mariadb}:/var/lib/mysql
     ports:
       - "${DB_PORT_MAPPING:-3307}:3306"
     networks:
       - app_network
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-Bateau123}"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: ${HEALTHCHECK_INTERVAL:-30s}
+      timeout: ${HEALTHCHECK_TIMEOUT:-10s}
+      retries: ${HEALTHCHECK_RETRIES:-3}
+      start_period: ${DB_HEALTHCHECK_START_PERIOD:-40s}
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    container_name: ${PROJECT_NAME:-php84}_pma
-    restart: unless-stopped
+    image: ${PMA_IMAGE:-phpmyadmin/phpmyadmin:latest}
+    container_name: ${COMPOSE_PROJECT_NAME:-artistik-php}_pma
+    restart: ${RESTART_POLICY:-unless-stopped}
+    env_file:
+      - ${ENV_FILE:-.env}
     environment:
-      PMA_HOST: mariadb
+      PMA_HOST: ${DB_HOST:-mariadb}
       PMA_PORT: 3306
       PMA_USER: ${DB_USER:-app_user}
-      PMA_PASSWORD: ${DB_PASSWORD:-Bateau123}
+      PMA_PASSWORD: ${DB_PASSWORD}
       UPLOAD_LIMIT: ${PHP_UPLOAD_MAX_SIZE:-64M}
     ports:
       - "${PMA_PORT:-8081}:80"
     depends_on:
-      - mariadb
+      mariadb:
+        condition: service_healthy
     networks:
       - app_network
     profiles:
@@ -74,4 +111,5 @@ services:
 
 networks:
   app_network:
-    driver: bridge
+    driver: ${NETWORK_DRIVER:-bridge}
+    name: ${COMPOSE_PROJECT_NAME:-artistik-php}_net

@@ -1,0 +1,106 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable Salesforce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formidable Salesforce 2.05\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-salesforce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-06-07T17:02:28+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-salesforce\n"
+
+#. Plugin Name of the plugin
+#: formidable-salesforce.php
+msgid "Formidable Salesforce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-salesforce.php
+msgid "https://formidableforms.com/"
+msgstr ""
+
+#. Description of the plugin
+#: formidable-salesforce.php
+msgid "Add leads to your Salesforce account when a Formidable form is submitted"
+msgstr ""
+
+#. Author of the plugin
+#: formidable-salesforce.php
+msgid "Strategy11"
+msgstr ""
+
+#: controllers/FrmSalesforceAppController.php:18
+msgid "You are running an outdated version of Formidable. This plugin needs Formidable v2.0 + to work correctly."
+msgstr ""
+
+#: controllers/FrmSalesforceSettingsController.php:101
+msgid "Authorize"
+msgstr ""
+
+#: controllers/FrmSalesforceSettingsController.php:111
+msgid "Deauthorize"
+msgstr ""
+
+#. translators: %s: the date string
+#: controllers/FrmSalesforceSettingsController.php:120
+msgid "Issued %s"
+msgstr ""
+
+#: models/FrmSalesforceAction.php:17
+msgid "Add to Salesforce"
+msgstr ""
+
+#: models/FrmSalesforceAPI.php:309
+msgid "Salesforce:"
+msgstr ""
+
+#: views/action-settings/salesforce_options.php:7
+msgid "Object"
+msgstr ""
+
+#: views/action-settings/salesforce_options.php:38
+msgid "Clear Cache"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:40
+msgid "Update existing record by"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:41
+msgid "Update the Salesforce record that matches the value in the selected field. Matching by email address is the most common for leads and contacts."
+msgstr ""
+
+#: views/settings/form.php:4
+msgid "Environment"
+msgstr ""
+
+#: views/settings/form.php:10
+msgid "Live"
+msgstr ""
+
+#: views/settings/form.php:13
+msgid "Sandbox"
+msgstr ""
+
+#: views/settings/form.php:22
+msgid "Consumer Key"
+msgstr ""
+
+#. translators: %1$s: Start link HTML, %2$s: end link HTML
+#: views/settings/form.php:30
+msgid "Create a new app in salesforce. Learn how to %1$sget Consumer key and Consumer Secret key%2$s"
+msgstr ""
+
+#: views/settings/form.php:55
+msgid "Auth Code"
+msgstr ""
+
+#: views/settings/form.php:61
+msgid "Paste the code copied from authorization window here and click the 'Update' button."
+msgstr ""

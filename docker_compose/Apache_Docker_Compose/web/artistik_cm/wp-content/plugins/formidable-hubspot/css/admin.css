@@ -1,0 +1,20 @@
+/* Hide the hubspot field in the field list. */
+#frm-insert-fields #hubspot {
+	display: none;
+}
+
+/* This CSS must be removed whenever the deprecated API key is removed from settings form. */
+.frm_hubspot_public_app_settings input[name=frm_hubspot_api_key] {
+	width: 400px; 
+	max-width: 100%; 
+	margin-left: 10px;
+}
+
+.frm_hubspot_public_app_settings p label {
+	display:inline;
+}
+
+/* @todo style margin must move to formidable admin */
+#form_global_settings #post-body-content > .frm_error_style {
+	margin: 5px 25px;
+}

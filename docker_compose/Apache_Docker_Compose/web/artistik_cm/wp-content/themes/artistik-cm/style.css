@@ -1,0 +1,31 @@
+/*
+Theme Name: Artistik CM
+Theme URI: https://artistik.cm
+Author: Artistik CM
+Author URI: https://artistik.cm
+Description: Thème léger pour Artistik — Bulma en local, pensé pour Elementor et TranslatePress (FR/EN).
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.9
+Requires PHP: 8.1
+Text Domain: artistik-cm
+*/
+
+/* Styles additionnels : préférences typo et espacement (Bulma couvre la grille et les composants) */
+:root {
+	--artistik-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--artistik-radius: 10px;
+}
+
+body.theme-artistik-cm {
+	font-family: var(--artistik-font);
+}
+
+.theme-artistik-cm .button.is-artistik {
+	border-radius: var(--artistik-radius);
+	font-weight: 600;
+}
+
+.theme-artistik-cm .navbar.is-artistik {
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}

@@ -1,0 +1,58 @@
+.frm-coupon-wrapper {
+	display: flex;
+}
+
+.frm-coupon-wrapper input[type="text"] {
+	max-width: 350px;
+}
+
+.frm-apply-coupon {
+	border-radius: 128px;
+	padding: 8px 16px;
+	font-size: 14px;
+	color: rgba(29, 41, 57, 1);
+	background-color: white;
+	border: 1px solid rgba(208, 213, 221, 1);
+	margin-left: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.frm-apply-coupon.frm-disabled {
+	pointer-events: none;
+	background-color: rgba(249, 250, 251, 1);
+	color: rgba(208, 213, 221, 1);
+}
+
+.frm-applied-coupon {
+	background-color: rgba(234, 236, 240, 1);
+	color: #000;
+	font-size: 16px;
+	padding: 8px;
+	border-radius: 8px;
+	display: inline-block;
+	margin-top: 8px;
+}
+
+.frm-applied-coupon svg {
+	margin-left: 8px;
+}
+
+.frm-applied-coupon svg * {
+	pointer-events: none;
+}
+
+.frm-applied-discount {
+	display: block;
+	margin-top: 8px;
+}
+
+.frm-dismiss-discount {
+	cursor: pointer;
+	color: rgba(240, 68, 56, 1);
+	vertical-align: middle;
+}
+
+.frm-applied-coupon + .frm_error {
+	margin-top: 8px !important;
+}

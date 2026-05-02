@@ -1,0 +1,74 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable MailPoet Newsletters plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formidable MailPoet Newsletters 1.04\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-mailpoet\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-20T16:05:07+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: frmmailpoet\n"
+
+#. Plugin Name of the plugin
+#: formidable-mailpoet.php
+msgid "Formidable MailPoet Newsletters"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-mailpoet.php
+msgid "https://formidableforms.com/"
+msgstr ""
+
+#. Description of the plugin
+#: formidable-mailpoet.php
+msgid "Add users to your MailPoet newsletter lists from Formidable forms"
+msgstr ""
+
+#. Author of the plugin
+#: formidable-mailpoet.php
+msgid "Strategy11"
+msgstr ""
+
+#: controllers/FrmMailPoetAppController.php:17
+msgid "You are running an outdated version of Formidable. This plugin needs Formidable v2.0 + to work correctly."
+msgstr ""
+
+#: controllers/FrmMailPoetAppController.php:174
+msgid "Mailpoet:"
+msgstr ""
+
+#: models/FrmMailPoetAction.php:15
+msgid "Add to MailPoet"
+msgstr ""
+
+#: views/action-settings/mailpoet_options.php:9
+msgid "List"
+msgstr ""
+
+#: views/action-settings/mailpoet_options.php:22
+msgid "No MailPoet list found "
+msgstr ""
+
+#: views/action-settings/_match_fields.php:20
+msgid "Send confirmation email"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:23
+#: views/action-settings/_match_fields.php:35
+msgid "No"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:26
+#: views/action-settings/_match_fields.php:38
+msgid "Yes"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:32
+msgid "Schedule welcome email"
+msgstr ""

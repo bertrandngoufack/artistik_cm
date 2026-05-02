@@ -1,0 +1,57 @@
+# Copyright (C) 2022 Strategy11
+# This file is distributed under the same license as the Formidable Multilingual plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-wpml\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-08-03T15:06:05+00:00\n"
+"PO-Revision-Date: 2024-04-18 04:05\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: formidable-wpml\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /[Strategy11.formidable-wpml] master/languages/formidable-wpml.pot\n"
+"X-Crowdin-File-ID: 2436\n"
+"Language: ja_JP\n"
+
+#. Plugin Name of the plugin
+msgid "Formidable Multilingual"
+msgstr "Formidable 多言語"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+msgid "Add multilingual support for Formidable"
+msgstr "Formidable に多言語サポートを追加します"
+
+#. Author of the plugin
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#: controllers/FrmWpmlSettingsController.php:48
+#: views/translate.php:14
+msgid "Translate Form"
+msgstr "フォームを翻訳"
+
+#: controllers/FrmWpmlSettingsController.php:74
+msgid "Translations Successfully Updated"
+msgstr "翻訳は正常に更新されました"
+
+#: controllers/FrmWpmlSettingsController.php:145
+msgid "You do not have WPML installed"
+msgstr "WPML がインストールされていません"
+
+#: views/single-input.php:13
+msgid "Complete"
+msgstr "完了"
+

@@ -1,0 +1,164 @@
+# Copyright (C) 2025 Strategy11
+# This file is distributed under the same license as the Formidable Conversational Forms plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formidable Conversational Forms 1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-chat\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-03-07T16:14:29+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: formidable-chat\n"
+
+#. Plugin Name of the plugin
+#: formidable-chat.php
+msgid "Formidable Conversational Forms"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-chat.php
+msgid "https://formidableforms.com/"
+msgstr ""
+
+#. Description of the plugin
+#: formidable-chat.php
+msgid "Ask one question at a time for automated conversations."
+msgstr ""
+
+#. Author of the plugin
+#: formidable-chat.php
+msgid "Strategy11"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:497
+msgid "Previous"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:498
+#: classes/helpers/FrmChatHtmlHelper.php:565
+#: views/settings/settings.php:118
+msgid "Continue"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:563
+#: views/settings/settings.php:125
+msgid "Start"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:567
+msgid "Submit"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:599
+msgid "Use %1$s to go back"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:600
+msgid "Shift+Tab"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:646
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:992
+msgid "press"
+msgstr ""
+
+#: classes/helpers/FrmChatHtmlHelper.php:992
+msgid "Enter"
+msgstr ""
+
+#: formidable-chat.php:70
+msgid "Formidable Conversational Forms requires Formidable Forms to be installed."
+msgstr ""
+
+#: formidable-chat.php:72
+msgid "Install Formidable Forms"
+msgstr ""
+
+#: formidable-chat.php:85
+msgid "Formidable Conversational Forms requires Formidable Forms Pro to be installed."
+msgstr ""
+
+#: views/settings/settings.php:7
+msgid "Convert a classic form into modern lead generators with one question at a time."
+msgstr ""
+
+#: views/settings/settings.php:23
+msgid "Turn on conversational form mode"
+msgstr ""
+
+#: views/settings/settings.php:29
+msgid "enables JavaScript validation"
+msgstr ""
+
+#: views/settings/settings.php:32
+msgid "disables saving drafts"
+msgstr ""
+
+#. translators: %s the other settings that will change when conversational forms are enabled.
+#: views/settings/settings.php:36
+msgid "(this %s)"
+msgstr ""
+
+#: views/settings/settings.php:37
+msgid "and"
+msgstr ""
+
+#: views/settings/settings.php:58
+msgid "Include arrow button navigation"
+msgstr ""
+
+#: views/settings/settings.php:82
+msgid "Show start page"
+msgstr ""
+
+#: views/settings/settings.php:88
+msgid "Transition type"
+msgstr ""
+
+#: views/settings/settings.php:94
+msgid "Horizontal"
+msgstr ""
+
+#: views/settings/settings.php:95
+msgid "Vertical"
+msgstr ""
+
+#: views/settings/settings.php:96
+msgid "Fade"
+msgstr ""
+
+#: views/settings/settings.php:102
+msgid "Type of Progress Bar"
+msgstr ""
+
+#: views/settings/settings.php:107
+msgid "None"
+msgstr ""
+
+#: views/settings/settings.php:108
+msgid "Progress Bar"
+msgstr ""
+
+#: views/settings/settings.php:109
+msgid "Text"
+msgstr ""
+
+#: views/settings/settings.php:110
+msgid "Progress Bar and Text"
+msgstr ""
+
+#: views/settings/settings.php:116
+msgid "Continue Button Text"
+msgstr ""
+
+#: views/settings/settings.php:123
+msgid "Start Button Text"
+msgstr ""

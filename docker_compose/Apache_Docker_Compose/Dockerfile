@@ -1,8 +1,9 @@
-FROM php:8.4-apache-bookworm
+ARG PHP_BASE_IMAGE=php:8.4-apache-bookworm
+FROM ${PHP_BASE_IMAGE}
 
-# Installation des dépendances système pour PHP 8.4
+ARG INSTALL_WPCLI=1
+
 RUN apt-get update && apt-get install -y \
-    # Bibliothèques de base
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
@@ -10,22 +11,17 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     libssl-dev \
-    # ICU pour intl (nécessaire PHP 8.4)
     libicu-dev \
-    # Outils système
     curl \
     git \
     unzip \
     pkg-config \
-    # Pour envsubst (optionnel)
-    gettext \
+    gettext-base \
     && rm -rf /var/lib/apt/lists/*
 
-# Configuration GD
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 
-# Installation des extensions PHP 8.4
-RUN docker-php-ext-install -j$(nproc) \
+RUN docker-php-ext-install -j"$(nproc)" \
     gd \
     mysqli \
     pdo \
@@ -39,39 +35,36 @@ RUN docker-php-ext-install -j$(nproc) \
     soap \
     sockets
 
-# Installation des extensions PECL
 RUN pecl install redis \
     && pecl install apcu \
     && docker-php-ext-enable redis apcu
 
-# Installation de Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Installation de WP-CLI (optionnel)
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
-    && chmod +x wp-cli.phar \
-    && mv wp-cli.phar /usr/local/bin/wp
+RUN if [ "$INSTALL_WPCLI" = "1" ]; then \
+    curl -fsSL -o /tmp/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+    && chmod +x /tmp/wp-cli.phar \
+    && mv /tmp/wp-cli.phar /usr/local/bin/wp; \
+    else \
+    echo '#!/bin/sh' > /usr/local/bin/wp && echo 'echo "WP-CLI désactivé au build (INSTALL_WPCLI=0)" >&2; exit 127' >> /usr/local/bin/wp && chmod +x /usr/local/bin/wp; \
+    fi
 
-# Configuration Apache pour PHP 8.4
 RUN a2enmod rewrite \
     && a2enmod headers \
     && a2enmod expires \
     && a2enmod remoteip
 
-# Configuration PHP
-COPY php.ini /usr/local/etc/php/conf.d/custom.ini
+COPY php.ini /usr/local/etc/php/conf.d/00-custom.ini
 
-# Script d'entrée
-COPY scripts/docker-entrypoint.sh /usr/local/bin/
+RUN mkdir -p /usr/local/share/php-stack/apache /usr/local/share/php-stack/bin
+COPY apache/vhost.conf.template /usr/local/share/php-stack/apache/vhost.conf.template
+
+COPY scripts/ensure-mysql-database.php /usr/local/share/php-stack/bin/ensure-mysql-database.php
+COPY scripts/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-# Permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
-
-# Healthcheck
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost/ || exit 1
 
 WORKDIR /var/www/html
 

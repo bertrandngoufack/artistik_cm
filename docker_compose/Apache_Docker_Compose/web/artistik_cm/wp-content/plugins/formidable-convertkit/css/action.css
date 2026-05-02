@@ -1,0 +1,24 @@
+.frm-cvk-reload {
+	cursor: pointer;
+}
+.frm-cvk-action-settings .spinner {
+	margin: 0;
+}
+.frm-cvk-is-loading .spinner {
+	visibility: visible;
+}
+.frm-cvk-action-settings[data-action=""] .frm-cvk-sequence-setting,
+.frm-cvk-action-settings[data-action="subscribe_sequence"] .frm-cvk-form-setting,
+.frm-cvk-action-settings[data-action="unsubscribe"] .frm-cvk-subscriber-update-setting,
+.frm-cvk-action-settings[data-action="unsubscribe"] .frm-cvk-form-setting,
+.frm-cvk-action-settings[data-action="unsubscribe"] .frm-cvk-sequence-setting,
+.frm-cvk-action-settings[data-action="unsubscribe"] .frm-cvk-form-setting,
+.frm-cvk-action-settings[data-action="unsubscribe"] .frm-cvk-tags-setting,
+.frm-cvk-action-settings[data-action="unsubscribe"] .frm-cvk-custom-fields-section,
+.frm-cvk-action-settings[data-action="remove_tag"] .frm-cvk-subscriber-update-setting,
+.frm-cvk-action-settings[data-action="remove_tag"] .frm-cvk-form-setting,
+.frm-cvk-action-settings[data-action="remove_tag"] .frm-cvk-sequence-setting,
+.frm-cvk-action-settings[data-action="remove_tag"] .frm-cvk-custom-fields-section,
+.frm-cvk-custom-fields-rows .frm_postmeta_row:first-child .frm_remove_tag {
+	display: none;
+}

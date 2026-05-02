@@ -1,0 +1,334 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable Quiz Maker plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-quizzes\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-19T12:24:52+00:00\n"
+"PO-Revision-Date: 2024-08-20 00:25\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-quizzes\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /[Strategy11.formidable-quizzes] master/languages/formidable-quizzes.pot\n"
+"X-Crowdin-File-ID: 2460\n"
+"Language: de_DE\n"
+
+#. Plugin Name of the plugin
+#: formidable-quizzes.php
+msgid "Formidable Quiz Maker"
+msgstr "Formidable Quiz Maker"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-quizzes.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-quizzes.php
+msgid "Make quizzes, automatically score them and show user scores"
+msgstr "Erstelle Quizze, bewerte sie automatisch und zeige die Ergebnisse der Benutzer an"
+
+#. Author of the plugin
+#: formidable-quizzes.php
+msgid "Strategy11"
+msgstr "Strategie11"
+
+#: controllers/FrmQuizzesAppController.php:97
+msgid "Migrating the quizzes database. Please do not leave this page!"
+msgstr "Migration der Quiz-Datenbank. Bitte verlasse diese Seite nicht!"
+
+#: controllers/FrmQuizzesAppController.php:98
+msgid "Database is updated successfully"
+msgstr "Die Datenbank wurde erfolgreich aktualisiert"
+
+#: controllers/FrmQuizzesAppController.php:99
+msgid "Database updating is not completed!"
+msgstr "Die Aktualisierung der Datenbank ist noch nicht abgeschlossen!"
+
+#: controllers/FrmQuizzesAppController.php:134
+#: models/FrmQuizzesField.php:65
+#: models/FrmQuizzesOutcomeAction.php:34
+msgid "Outcome"
+msgstr "Ergebnis"
+
+#: controllers/FrmQuizzesAppController.php:136
+#: models/FrmQuizzesAction.php:49
+#: models/FrmQuizzesField.php:65
+msgid "Score"
+msgstr "Punktzahl"
+
+#. translators: %s: Outcome result (Name of action/outcome).
+#: controllers/FrmQuizzesEntriesController.php:92
+msgid "Outcome: %s"
+msgstr "Ergebnis: %s"
+
+#. translators: %s: Total score number.
+#: controllers/FrmQuizzesEntriesController.php:106
+msgid "Total Score: %s"
+msgstr "Gesamtpunktzahl: %s"
+
+#: controllers/FrmQuizzesMigrationController.php:56
+msgid "Your quizzes database is out of date."
+msgstr "Deine Quiz-Datenbank ist nicht mehr aktuell."
+
+#: controllers/FrmQuizzesMigrationController.php:57
+msgid "Upgrade database"
+msgstr "Datenbank aktualisieren"
+
+#: controllers/FrmQuizzesScoredController.php:42
+msgid "You don't have permission to do that."
+msgstr "Du hast keine Erlaubnis, das zu tun."
+
+#: controllers/FrmQuizzesSettingsController.php:218
+msgid "Quizzes"
+msgstr "Quiz"
+
+#: helpers/FrmQuizzesAppHelper.php:25
+msgid "Scored quiz"
+msgstr "Bewertetes Quiz"
+
+#: helpers/FrmQuizzesAppHelper.php:26
+msgid "Outcome quiz"
+msgstr "Ergebnis-Quiz"
+
+#: helpers/FrmQuizzesAppHelper.php:108
+msgid "Unscored"
+msgstr "Unbewertet"
+
+#: helpers/FrmQuizzesAppHelper.php:142
+msgid "Should equal"
+msgstr "Sollte gleich"
+
+#: helpers/FrmQuizzesAppHelper.php:143
+msgid "Should contain all"
+msgstr "Sollte alle enthalten"
+
+#: helpers/FrmQuizzesAppHelper.php:144
+msgid "Should contain one"
+msgstr "Sollte eine enthalten"
+
+#: helpers/FrmQuizzesAppHelper.php:145
+msgid "Should not contain"
+msgstr "Sollte nicht enthalten"
+
+#: helpers/FrmQuizzesAppHelper.php:146
+msgid "Less than"
+msgstr ""
+
+#: helpers/FrmQuizzesAppHelper.php:147
+msgid "Greater than"
+msgstr ""
+
+#. translators: score.
+#: helpers/FrmQuizzesManualHelper.php:29
+msgid "%s point"
+msgid_plural "%s points"
+msgstr[0] "%s Punkt"
+msgstr[1] "%s Punkte"
+
+#: helpers/FrmQuizzesManualHelper.php:61
+msgid "Entry ID, Field ID, and Score must not be empty"
+msgstr "Eingabe-ID, Feld-ID und Punktestand dürfen nicht leer sein"
+
+#: models/FrmQuizzesAction.php:23
+#: views/form-actions/scored/modal.php:24
+msgid "Scored Quiz"
+msgstr "Bewertetes Quiz"
+
+#: models/FrmQuizzesAction.php:180
+msgid "What would you like to show after submit?"
+msgstr "Was möchtest du nach dem Senden zeigen?"
+
+#: models/FrmQuizzesAction.php:187
+msgid "Randomize questions"
+msgstr "Fragen zufällig auswählen"
+
+#: models/FrmQuizzesAction.php:189
+msgid "Show the fields in a random order each time the form is loaded"
+msgstr "Zeige die Felder in zufälliger Reihenfolge an, wenn das Formular geladen wird"
+
+#: models/FrmQuizzesAction.php:193
+msgid "Randomize options"
+msgstr "Optionen zufällig auswählen"
+
+#: models/FrmQuizzesAction.php:195
+msgid "Change the order of options in a field with multiple options (radio, checkbox, select)"
+msgstr "Ändere die Reihenfolge der Optionen in einem Feld mit mehreren Optionen (Radio, Checkbox, Auswahl)"
+
+#: models/FrmQuizzesAction.php:199
+msgid "Allow negative scoring"
+msgstr "Negative Punktevergabe zulassen"
+
+#: models/FrmQuizzesAction.php:201
+msgid "Applicable only for questions with advanced scoring"
+msgstr "Gilt nur für Fragen mit erweiterter Punktzahl"
+
+#: models/FrmQuizzesAction.php:223
+msgid "Use default success settings"
+msgstr "Standard-Erfolgseinstellungen verwenden"
+
+#: models/FrmQuizzesAction.php:224
+msgid "Show the score"
+msgstr "Zeige den Spielstand"
+
+#: models/FrmQuizzesAction.php:225
+msgid "Show user's answers"
+msgstr "Antworten der Benutzer anzeigen"
+
+#: models/FrmQuizzesAction.php:226
+msgid "Show correct answers"
+msgstr "Richtige Antworten anzeigen"
+
+#: models/FrmQuizzesEntryFormatter.php:163
+msgid "Change"
+msgstr "Ändern"
+
+#: models/FrmQuizzesEntryFormatter.php:174
+msgid "Save"
+msgstr "Speichern"
+
+#: models/FrmQuizzesEntryFormatter.php:259
+msgid "Should not contain:"
+msgstr "Sollte nicht enthalten:"
+
+#: models/FrmQuizzesEntryFormatter.php:259
+msgid "Correct answer:"
+msgstr "Richtige Antwort:"
+
+#: models/FrmQuizzesEntryFormatter.php:280
+msgid "or"
+msgstr "oder"
+
+#: models/FrmQuizzesEntryFormatter.php:280
+msgid "and"
+msgstr "und"
+
+#. Translators: correct answer.
+#: models/FrmQuizzesEntryFormatter.php:295
+msgid "Greater than %s"
+msgstr ""
+
+#. Translators: correct answer.
+#: models/FrmQuizzesEntryFormatter.php:299
+msgid "Less than %s"
+msgstr ""
+
+#: models/FrmQuizzesOutcomeAction.php:23
+msgid "Quiz Outcome"
+msgstr "Quiz-Ergebnis"
+
+#: models/FrmQuizzesOutcomeAction.php:85
+msgid "Image"
+msgstr "Bild"
+
+#: models/FrmQuizzesOutcomeAction.php:91
+msgid "Message"
+msgstr "Nachricht"
+
+#. translators: %d: field id.
+#: views/field/backend-builder.php:11
+msgid "You can display your quiz result using the [%d] shortcode in an email action or in a View."
+msgstr "Du kannst dein Quizergebnis mit dem Shortcode [%d] in einer E-Mail-Aktion oder in einer Ansicht anzeigen."
+
+#: views/form-actions/scored/type-choice.php:33
+msgid "Advanced scoring"
+msgstr "Erweiterte Punktevergabe"
+
+#: views/form-actions/scored/type-choice.php:63
+#: views/form-actions/scored/type-text.php:45
+msgid "Points"
+msgstr "Punkte"
+
+#: views/form-actions/scored/type-choice.php:74
+#: views/form-actions/scored/type-text.php:81
+msgid "Add correct answer(s)"
+msgstr "Richtige Antwort(en) hinzufügen"
+
+#: views/form-actions/scored/type-text.php:30
+msgid "Score this field manually"
+msgstr "Dieses Feld manuell bewerten"
+
+#: views/form-actions/scored/type-text.php:36
+msgid "Enter a comma-separated list of correct choices"
+msgstr "Gib eine durch Komma getrennte Liste der richtigen Auswahlmöglichkeiten ein"
+
+#: views/form-actions/scored/type-text.php:93
+msgid "Max score"
+msgstr "Maximale Punktzahl"
+
+#: views/form-actions/settings.php:137
+msgid "Customize Quiz Scoring"
+msgstr "Quizauswertung anpassen"
+
+#: views/form-actions/settings.php:145
+msgid "Add another outcome"
+msgstr "Ein weiteres Ergebnis hinzufügen"
+
+#: views/quiz/show-score.php:26
+msgid "Your total score is"
+msgstr "Deine Gesamtpunktzahl ist"
+
+#. translators: %1$s: correct answers count text, %2$d: total answers count.
+#: views/quiz/show-score.php:37
+msgid "%1$s out of %2$d"
+msgstr "%1$s aus %2$d"
+
+#. translators: number of correct answers.
+#: views/quiz/show-score.php:41
+msgid "%d point"
+msgid_plural "%d points"
+msgstr[0] "%d Punkt"
+msgstr[1] "%d Punkte"
+
+#: views/settings/form.php:8
+msgid "Grading Scale"
+msgstr "Notenskala"
+
+#: views/settings/form.php:14
+msgid "Letter Grade"
+msgstr "Buchstabengrad"
+
+#: views/settings/form.php:15
+msgid "Start %"
+msgstr "Start %"
+
+#: views/settings/form.php:16
+msgid "End %"
+msgstr "Ende %"
+
+#: views/settings/form.php:25
+#: js/frmquizzes-settings.js:36
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: views/settings/form.php:27
+#: js/frmquizzes-settings.js:37
+msgid "Remove"
+msgstr "Entferne"
+
+#: views/shared/modal-footer.php:15
+msgid "Done"
+msgstr "Fertig"
+
+#: views/shared/modal-header.php:19
+#: views/shared/modal-header.php:20
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: js/frm-quizzes-form-action.js:348
+msgid "Outcome Conditions"
+msgstr ""
+
+#: js/frm-quizzes-form-action.js:507
+msgid "Only one type of Quiz action can be included in a form."
+msgstr ""
+

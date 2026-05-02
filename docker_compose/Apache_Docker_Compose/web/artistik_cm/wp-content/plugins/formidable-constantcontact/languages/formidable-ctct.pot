@@ -1,0 +1,135 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable Constant Contact plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formidable Constant Contact 1.07\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-constantcontact\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-06-07T13:20:54+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-ctct\n"
+
+#. Plugin Name of the plugin
+#: formidable-constantcontact.php
+msgid "Formidable Constant Contact"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-constantcontact.php
+msgid "https://formidableforms.com/"
+msgstr ""
+
+#. Description of the plugin
+#: formidable-constantcontact.php
+msgid "Add contacts to Constant Contact account when a Formidable form is submitted"
+msgstr ""
+
+#. Author of the plugin
+#: formidable-constantcontact.php
+msgid "Strategy11"
+msgstr ""
+
+#: controllers/FrmCtctAppController.php:36
+msgid "You are running an outdated version of Formidable. This plugin needs Formidable v2.0 + to work correctly."
+msgstr ""
+
+#. translators: %1$s: Start link HTML, %2$s: end link HTML
+#: controllers/FrmCtctSettingsController.php:131
+msgid "Constant Contact has a new authorization service. Click %1$shere%2$s to connect to the new service."
+msgstr ""
+
+#: models/FrmCtctAction.php:15
+msgid "Add to Constant Contact"
+msgstr ""
+
+#: models/FrmCtctAction.php:57
+msgid "Email Address"
+msgstr ""
+
+#: models/FrmCtctAction.php:60
+msgid "First Name"
+msgstr ""
+
+#: models/FrmCtctAction.php:61
+msgid "Last Name"
+msgstr ""
+
+#: models/FrmCtctAction.php:62
+msgid "Company Name"
+msgstr ""
+
+#: models/FrmCtctAction.php:63
+msgid "Job Title"
+msgstr ""
+
+#: models/FrmCtctAction.php:65
+msgid "Home Address"
+msgstr ""
+
+#: models/FrmCtctAction.php:69
+msgid "Work Address"
+msgstr ""
+
+#: models/FrmCtctAction.php:73
+msgid "Home phone"
+msgstr ""
+
+#: models/FrmCtctAction.php:77
+msgid "Work phone"
+msgstr ""
+
+#: models/FrmCtctAction.php:81
+msgid "Anniversary"
+msgstr ""
+
+#: models/FrmCtctAction.php:85
+msgid "Birthday"
+msgstr ""
+
+#: models/FrmCtctAPI.php:117
+msgid "Failed to Authorize your request."
+msgstr ""
+
+#. translators: %1$s: Start link HTML, %2$s: end link HTML
+#: models/FrmCtctAPI.php:368
+msgid "The Constant Contact authorization has expired. Please return to the %1$sGlobal settings%2$s and reauthorize."
+msgstr ""
+
+#: models/FrmCtctAPI.php:664
+msgid "Constant Contact:"
+msgstr ""
+
+#: views/action-settings/options.php:5
+msgid "List"
+msgstr ""
+
+#: views/action-settings/options.php:23
+msgid "Clear Cache"
+msgstr ""
+
+#: views/action-settings/options.php:61
+msgid "No matching fields available"
+msgstr ""
+
+#: views/settings/form.php:9
+msgid "Click \"Update\" in the top right to confirm your new Constant Contact Authorization Code."
+msgstr ""
+
+#. translators: %1$s: Start link HTML, %2$s: end link HTML
+#: views/settings/form.php:46
+msgid "Learn more about the Constant Contact %1$sAuthorization code%2$s."
+msgstr ""
+
+#: views/settings/form.php:54
+msgid "Get Authorization Code"
+msgstr ""
+
+#: views/settings/form.php:60
+msgid "Authorization Code"
+msgstr ""

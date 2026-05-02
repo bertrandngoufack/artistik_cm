@@ -1,0 +1,82 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable MailPoet Newsletters plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-mailpoet\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-06-07T13:08:57+00:00\n"
+"PO-Revision-Date: 2024-06-07 13:30\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: frmmailpoet\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /[Strategy11.formidable-mailpoet] master/languages/frmmailpoet.pot\n"
+"X-Crowdin-File-ID: 2374\n"
+"Language: it_IT\n"
+
+#. Plugin Name of the plugin
+#: formidable-mailpoet.php
+msgid "Formidable MailPoet Newsletters"
+msgstr "Formidable MailPoet Newsletters"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-mailpoet.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-mailpoet.php
+msgid "Add users to your MailPoet newsletter lists from Formidable forms"
+msgstr ""
+
+#. Author of the plugin
+#: formidable-mailpoet.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#: controllers/FrmMailPoetAppController.php:17
+msgid "You are running an outdated version of Formidable. This plugin needs Formidable v2.0 + to work correctly."
+msgstr "Stai usando una versione non aggiornata di Formidable. Questo plugin ha bisogno di Formidable v2.0 o successiva per funzionare correttamente."
+
+#: controllers/FrmMailPoetAppController.php:174
+msgid "Mailpoet:"
+msgstr "Mailpoet:"
+
+#: models/FrmMailPoetAction.php:15
+msgid "Add to MailPoet"
+msgstr "Aggiungi a MailPoet"
+
+#: views/action-settings/mailpoet_options.php:9
+msgid "List"
+msgstr "Elenco"
+
+#: views/action-settings/mailpoet_options.php:22
+msgid "No MailPoet list found "
+msgstr "Nessuna lista MailPoet trovata "
+
+#: views/action-settings/_match_fields.php:20
+msgid "Send confirmation email"
+msgstr "Invia un'email di conferma"
+
+#: views/action-settings/_match_fields.php:23
+#: views/action-settings/_match_fields.php:35
+msgid "No"
+msgstr "No"
+
+#: views/action-settings/_match_fields.php:26
+#: views/action-settings/_match_fields.php:38
+msgid "Yes"
+msgstr "Si"
+
+#: views/action-settings/_match_fields.php:32
+msgid "Schedule welcome email"
+msgstr "Pianifica l'email di benvenuto"
+

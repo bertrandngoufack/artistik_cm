@@ -1,0 +1,164 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Formidable AWeber v2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-12-21 21:36:04+0000\n"
+"Last-Translator: admin <admin444@strategy11.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: controllers/FrmAwbrSettingsController.php:237
+#@ formidable-aweber
+msgid "There was a problem authenticating AWeber"
+msgstr ""
+
+#: controllers/FrmAwbrSettingsController.php:259
+#@ formidable-aweber
+msgid "AWeber Authorization failed"
+msgstr ""
+
+#: controllers/FrmAwbrSettingsController.php:261
+#@ formidable-aweber
+msgid "AWeber successfully Authorized"
+msgstr ""
+
+#: helpers/FrmAwbrAppHelper.php:28
+#, php-format
+#@ formidable-aweber
+msgid "Your AWeber account info is not correct. %1$sUpdate it now.%2$s"
+msgstr ""
+
+#: models/FrmAwbrAction.php:14
+#@ formidable-aweber
+msgid "Add to AWeber"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:7
+#: views/settings/_match_fields.php:6
+#@ formidable-aweber
+msgid "Email"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:8
+#: views/settings/_match_fields.php:7
+#@ formidable-aweber
+msgid "Full Name"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:21
+#: views/settings/_logic_row.php:5
+#: views/settings/_match_fields.php:19
+#@ formidable-aweber
+msgid "Select Field"
+msgstr ""
+
+#: views/action-settings/aweber_options.php:9
+#@ formidable-aweber
+msgid "List"
+msgstr ""
+
+#: views/action-settings/aweber_options.php:11
+#: views/settings/_list_options.php:7
+#@ formidable-aweber
+msgid "Select List"
+msgstr ""
+
+#: views/action-settings/aweber_options.php:17
+#: views/settings/_list_options.php:13
+#@ formidable-aweber
+msgid "No AWeber mailing lists found"
+msgstr ""
+
+#: views/settings/_list_options.php:3
+#@ formidable-aweber
+msgid "Remove"
+msgstr ""
+
+#: views/settings/_logic_row.php:13
+#@ formidable-aweber
+msgid "is"
+msgstr ""
+
+#: views/settings/_logic_row.php:22
+#@ formidable-aweber
+msgid "equal to"
+msgstr ""
+
+#: views/settings/_logic_row.php:23
+#@ formidable-aweber
+msgid "NOT equal to"
+msgstr ""
+
+#: views/settings/_logic_row.php:24
+#@ formidable-aweber
+msgid "greater than"
+msgstr ""
+
+#: views/settings/_logic_row.php:25
+#@ formidable-aweber
+msgid "less than"
+msgstr ""
+
+#: views/settings/_match_fields.php:28
+#@ formidable-aweber
+msgid "Conditional Logic"
+msgstr ""
+
+#: views/settings/_match_fields.php:42
+#@ formidable-aweber
+msgid "Add Conditional Logic"
+msgstr ""
+
+#: views/settings/aweber_options.php:8
+#@ formidable-aweber
+msgid "Add users who submit this form to an AWeber mailing list"
+msgstr ""
+
+#: views/settings/aweber_options.php:38
+#@ formidable-aweber
+msgid "Add List"
+msgstr ""
+
+#: views/settings/form.php:13
+#@ formidable-aweber
+msgid "Authorization ID"
+msgstr ""
+
+#: views/settings/form.php:20
+#@ formidable-aweber
+msgid "To setup AWeber:"
+msgstr ""
+
+#: views/settings/form.php:22
+#@ formidable-aweber
+msgid "Before you can use AWeber with your forms, you first need to authorize it to access your AWeber account."
+msgstr ""
+
+#: views/settings/form.php:22
+#@ formidable-aweber
+msgid "Click here to get your AWeber authorization ID."
+msgstr ""
+
+#: views/settings/form.php:23
+#@ formidable-aweber
+msgid "After you login to AWeber, you will be given an authorization ID. Copy it and paste it below."
+msgstr ""
+
+#: views/settings/form.php:24
+#@ formidable-aweber
+msgid "Click Update. If you see a success message you are ready to setup your forms to create AWeber contacts."
+msgstr ""
+

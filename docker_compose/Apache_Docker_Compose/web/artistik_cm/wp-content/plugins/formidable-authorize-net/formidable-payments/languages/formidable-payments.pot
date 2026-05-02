@@ -1,0 +1,742 @@
+# Copyright (C) 2022 Strategy11
+# This file is distributed under the same license as the Formidable Payments plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formidable Payments 2.02\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-payments\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-03-04T16:22:22+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: formidable-payments\n"
+
+#. Plugin Name of the plugin
+msgid "Formidable Payments"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://formidableforms.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "The base functionality for collecting payments"
+msgstr ""
+
+#. Author of the plugin
+msgid "Strategy11"
+msgstr ""
+
+#: controllers/FrmTransActionsController.php:18
+msgid "Successful Payment"
+msgstr ""
+
+#: controllers/FrmTransActionsController.php:19
+msgid "Failed Payment"
+msgstr ""
+
+#: controllers/FrmTransActionsController.php:20
+msgid "Canceled Subscription"
+msgstr ""
+
+#: controllers/FrmTransActionsController.php:21
+msgid "Subscription Canceled and Expired"
+msgstr ""
+
+#: controllers/FrmTransActionsController.php:127
+msgid "There was an error processing your payment."
+msgstr ""
+
+#: controllers/FrmTransCRUDController.php:9
+#: controllers/FrmTransCRUDController.php:63
+msgid "Please select a payment to view"
+msgstr ""
+
+#: controllers/FrmTransCRUDController.php:34
+msgid "Payment was Successfully Deleted"
+msgstr ""
+
+#: controllers/FrmTransCRUDController.php:53
+msgid "Payment was Successfully Updated"
+msgstr ""
+
+#: controllers/FrmTransCRUDController.php:55
+msgid "There was a problem updating that payment"
+msgstr ""
+
+#: controllers/FrmTransEntriesController.php:16
+#: controllers/FrmTransListsController.php:20
+#: views/lists/list.php:3
+#: views/payments/show.php:3
+#: views/payments/sidebar_list.php:4
+#: views/subscriptions/show.php:3
+msgid "Payments"
+msgstr ""
+
+#: controllers/FrmTransEntriesController.php:17
+#: views/payments/form.php:67
+msgid "Expiration Date"
+msgstr ""
+
+#: controllers/FrmTransEntriesController.php:18
+#: controllers/FrmTransListsController.php:55
+#: views/payments/form.php:11
+#: views/payments/show.php:47
+#: views/subscriptions/show.php:43
+msgid "Status"
+msgstr ""
+
+#: controllers/FrmTransFieldsController.php:6
+#: views/subscriptions/show.php:80
+msgid "Gateway"
+msgstr ""
+
+#: controllers/FrmTransFieldsController.php:15
+#: views/payments/form.php:74
+msgid "Payment Method"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:29
+msgid "Customer"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:33
+msgid "Profile ID"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:34
+#: controllers/FrmTransListsController.php:44
+#: views/payments/show.php:59
+#: views/subscriptions/show.php:55
+msgid "Entry"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:35
+#: controllers/FrmTransListsController.php:45
+msgid "Form"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:36
+#: views/subscriptions/list_shortcode.php:4
+#: views/subscriptions/show.php:66
+msgid "Billing Cycle"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:38
+msgid "Payments Made"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:39
+#: views/subscriptions/list_shortcode.php:5
+msgid "Next Bill Date"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:43
+msgid "Receipt ID"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:46
+#: views/action-settings/options.php:11
+#: views/payments/form.php:53
+#: views/payments/show.php:90
+msgid "Amount"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:47
+#: views/payments/show.php:80
+#: views/subscriptions/show.php:38
+#: views/subscriptions/show.php:63
+msgid "Subscription"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:48
+msgid "Begin Date"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:49
+msgid "Expire Date"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:56
+#: views/payments/form.php:62
+msgid "Date"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:57
+msgid "Processor"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:106
+msgid "No payments were selected"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:132
+msgid "Payments were Successfully Deleted"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:153
+msgid "Downloads"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:38
+msgid "Payment was Successfully Created"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:41
+msgid "There was a problem creating that payment"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:93
+#: controllers/FrmTransPaymentsController.php:120
+#: helpers/FrmTransAppHelper.php:54
+#: models/FrmTransAction.php:173
+msgid "Refunded"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:96
+msgid "Are you sure you want to refund that payment?"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:98
+msgid "Refund"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:122
+#: controllers/FrmTransSubscriptionsController.php:59
+#: helpers/FrmTransAppHelper.php:53
+#: models/FrmTransAction.php:172
+msgid "Failed"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:125
+msgid "Oops! No payment was selected for refund."
+msgstr ""
+
+#: controllers/FrmTransSubscriptionsController.php:29
+msgid "Are you sure you want to cancel that subscription?"
+msgstr ""
+
+#: controllers/FrmTransSubscriptionsController.php:30
+msgid "Cancel"
+msgstr ""
+
+#: controllers/FrmTransSubscriptionsController.php:33
+#: controllers/FrmTransSubscriptionsController.php:57
+#: helpers/FrmTransAppHelper.php:55
+#: helpers/FrmTransAppHelper.php:63
+#: helpers/FrmTransAppHelper.php:64
+#: models/FrmTransAction.php:174
+msgid "Canceled"
+msgstr ""
+
+#: controllers/FrmTransSubscriptionsController.php:62
+msgid "That subscription was not found"
+msgstr ""
+
+#: controllers/FrmTransSubscriptionsController.php:66
+msgid "Oops! No subscription was selected for cancelation."
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:20
+#: helpers/FrmTransAppHelper.php:21
+msgid "Manual"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:50
+msgid "Authorized"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:51
+#: helpers/FrmTransAppHelper.php:61
+msgid "Pending"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:52
+#: models/FrmTransAction.php:171
+msgid "Completed"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:62
+msgid "Active"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:65
+msgid "Void"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:71
+msgid "Payment %s"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:104
+msgid "Australian Dollar"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:109
+msgid "Bangladeshi Taka"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:114
+msgid "Brazilian Real"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:119
+msgid "Canadian Dollar"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:124
+msgid "Chinese Renminbi Yuan"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:129
+msgid "Czech Koruna"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:134
+msgid "Danish Krone"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:139
+msgid "Euro"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:144
+msgid "Hong Kong Dollar"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:149
+msgid "Hungarian Forint"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:154
+msgid "Indian Rupee"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:159
+msgid "Israeli New Sheqel"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:164
+msgid "Japanese Yen"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:169
+msgid "Malaysian Ringgit"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:174
+msgid "Mexican Peso"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:179
+msgid "New Zealand Dollar"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:184
+msgid "Norwegian Krone"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:189
+msgid "Pakistani Rupee"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:194
+msgid "Philippine Peso"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:199
+msgid "Polish Zloty"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:204
+msgid "Pound Sterling"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:209
+msgid "Singapore Dollar"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:214
+msgid "South African Rand"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:223
+msgid "Sri Lankan Rupee"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:228
+msgid "Swedish Krona"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:233
+msgid "Swiss Franc"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:238
+msgid "Taiwan New Dollar"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:243
+msgid "Thai Baht"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:248
+msgid "Turkish Liras"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:253
+msgid "Uruguayan Peso"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:258
+msgid "U.S. Dollar"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:386
+#: views/action-settings/options.php:57
+msgid "day(s)"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:387
+msgid "week(s)"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:388
+msgid "month(s)"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:389
+msgid "year(s)"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:401
+msgid "day"
+msgid_plural "days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: helpers/FrmTransAppHelper.php:402
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: helpers/FrmTransAppHelper.php:403
+msgid "month"
+msgid_plural "months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: helpers/FrmTransAppHelper.php:404
+msgid "year"
+msgid_plural "years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: helpers/FrmTransAppHelper.php:511
+msgid "Guest"
+msgstr ""
+
+#: helpers/FrmTransListHelper.php:48
+msgid "No payments found."
+msgstr ""
+
+#: helpers/FrmTransListHelper.php:238
+#: views/payments/edit.php:20
+msgid "View"
+msgstr ""
+
+#: helpers/FrmTransListHelper.php:283
+msgid "unlimited"
+msgstr ""
+
+#: helpers/FrmTransListHelper.php:295
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: models/FrmTransAction.php:15
+msgid "Collect a Payment"
+msgstr ""
+
+#: models/FrmTransAction.php:175
+msgid "Canceled and Expired"
+msgstr ""
+
+#: models/FrmTransAction.php:196
+msgid "&mdash; Select Field &mdash;"
+msgstr ""
+
+#: models/FrmTransAction.php:243
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: models/FrmTransAction.php:263
+msgid "Oops! You need a %s field in your form."
+msgstr ""
+
+#: views/action-settings/options.php:4
+msgid "Description"
+msgstr ""
+
+#: views/action-settings/options.php:23
+msgid "Credit Card"
+msgstr ""
+
+#: views/action-settings/options.php:31
+msgid "Payment Type"
+msgstr ""
+
+#: views/action-settings/options.php:34
+msgid "One-time Payment"
+msgstr ""
+
+#: views/action-settings/options.php:35
+msgid "Recurring"
+msgstr ""
+
+#: views/action-settings/options.php:41
+msgid "Repeat Every"
+msgstr ""
+
+#: views/action-settings/options.php:54
+msgid "Trial Period"
+msgstr ""
+
+#: views/action-settings/options.php:63
+msgid "Capture Payment"
+msgstr ""
+
+#: views/action-settings/options.php:67
+msgid "When entry is submitted"
+msgstr ""
+
+#: views/action-settings/options.php:70
+msgid "Later (collect manually)"
+msgstr ""
+
+#: views/action-settings/options.php:78
+msgid "Currency"
+msgstr ""
+
+#: views/action-settings/options.php:91
+msgid "Gateway(s)"
+msgstr ""
+
+#: views/action-settings/options.php:119
+msgid "Bank Account Details"
+msgstr ""
+
+#: views/action-settings/options.php:125
+msgid "Routing Number"
+msgstr ""
+
+#: views/action-settings/options.php:131
+msgid "Account Number"
+msgstr ""
+
+#: views/action-settings/options.php:137
+msgid "Bank Name"
+msgstr ""
+
+#: views/action-settings/options.php:144
+msgid "Customer Information"
+msgstr ""
+
+#: views/action-settings/options.php:149
+msgid "Email"
+msgstr ""
+
+#: views/action-settings/options.php:156
+#: views/action-settings/options.php:199
+msgid "Address"
+msgstr ""
+
+#: views/action-settings/options.php:162
+#: views/action-settings/options.php:206
+msgid "First Name"
+msgstr ""
+
+#: views/action-settings/options.php:168
+#: views/action-settings/options.php:212
+msgid "Last Name"
+msgstr ""
+
+#: views/action-settings/options.php:174
+#: views/action-settings/options.php:219
+msgid "Company"
+msgstr ""
+
+#: views/action-settings/options.php:184
+msgid "Shipping Information"
+msgstr ""
+
+#: views/action-settings/options.php:185
+msgid "Select the fields to associate with the customer shipping information."
+msgstr ""
+
+#: views/action-settings/options.php:190
+msgid "Shipping"
+msgstr ""
+
+#: views/action-settings/options.php:193
+msgid "Collect shipping information with this form"
+msgstr ""
+
+#: views/action-settings/options.php:226
+msgid "After Payment"
+msgstr ""
+
+#: views/action-settings/options.php:227
+msgid "Change a field value when the status of a payment changes."
+msgstr ""
+
+#: views/action-settings/options.php:233
+msgid "Add"
+msgstr ""
+
+#: views/action-settings/options.php:240
+msgid "Payment Status"
+msgstr ""
+
+#: views/action-settings/options.php:241
+msgid "Field"
+msgstr ""
+
+#: views/action-settings/options.php:242
+msgid "Value"
+msgstr ""
+
+#: views/fields/gateway-back-end.php:6
+msgid "Do not delete this field. It will be hidden in your form but is required to process payments."
+msgstr ""
+
+#: views/lists/list.php:5
+#: views/payments/edit.php:4
+msgid "Add New"
+msgstr ""
+
+#: views/payments/edit.php:3
+msgid "Edit Payment"
+msgstr ""
+
+#: views/payments/edit.php:14
+#: views/payments/new.php:12
+msgid "Publish"
+msgstr ""
+
+#: views/payments/edit.php:29
+#: views/payments/show.php:22
+msgid "Are you sure you want to delete that payment?"
+msgstr ""
+
+#: views/payments/edit.php:34
+#: views/payments/edit.php:54
+msgid "Update"
+msgstr ""
+
+#: views/payments/form.php:2
+#: views/payments/show.php:10
+#: views/subscriptions/show.php:10
+msgid "Payment Details"
+msgstr ""
+
+#: views/payments/form.php:24
+msgid "Entry ID"
+msgstr ""
+
+#: views/payments/form.php:28
+msgid "View Entry"
+msgstr ""
+
+#: views/payments/form.php:34
+#: views/payments/show.php:69
+msgid "Receipt"
+msgstr ""
+
+#: views/payments/form.php:45
+msgid "Subscription Number:"
+msgstr ""
+
+#: views/payments/new.php:3
+msgid "New Payment"
+msgstr ""
+
+#: views/payments/new.php:16
+#: views/payments/new.php:34
+msgid "Submit"
+msgstr ""
+
+#: views/payments/show.php:42
+msgid "Payment"
+msgstr ""
+
+#: views/payments/show.php:52
+#: views/subscriptions/show.php:48
+msgid "User"
+msgstr ""
+
+#: views/payments/show.php:76
+msgid "Invoice #"
+msgstr ""
+
+#: views/payments/show.php:83
+msgid "View Subscription"
+msgstr ""
+
+#: views/payments/show.php:96
+msgid "Payment Dates"
+msgstr ""
+
+#: views/payments/show.php:109
+#: views/subscriptions/show.php:91
+msgid "Payment Status Updates"
+msgstr ""
+
+#: views/payments/sidebar_actions.php:4
+#: views/subscriptions/sidebar_actions.php:4
+msgid "Created on: %1$s"
+msgstr ""
+
+#: views/payments/sidebar_actions.php:11
+msgid "Payment:"
+msgstr ""
+
+#: views/payments/sidebar_list.php:20
+msgid "Created:"
+msgstr ""
+
+#: views/payments/sidebar_list.php:23
+msgid "Show Payment"
+msgstr ""
+
+#: views/payments/sidebar_list.php:31
+msgid "Amount:"
+msgstr ""
+
+#: views/payments/sidebar_list.php:41
+msgid "Status:"
+msgstr ""
+
+#: views/payments/sidebar_list.php:69
+msgid "Total Paid:"
+msgstr ""
+
+#: views/subscriptions/show.php:22
+msgid "Are you sure you want to delete that subscription?"
+msgstr ""
+
+#: views/subscriptions/show.php:71
+msgid "Next Payment Date"
+msgstr ""
+
+#: views/subscriptions/show.php:77
+msgid "Fail Count"
+msgstr ""
+
+#: views/subscriptions/sidebar_actions.php:11
+msgid "Subscription:"
+msgstr ""

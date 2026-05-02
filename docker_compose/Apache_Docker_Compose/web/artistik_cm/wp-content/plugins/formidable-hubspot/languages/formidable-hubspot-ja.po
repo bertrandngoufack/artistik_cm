@@ -1,0 +1,261 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable HubSpot plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-hubspot\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-06-07T16:44:07+00:00\n"
+"PO-Revision-Date: 2024-06-08 01:31\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-hubspot\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /[Strategy11.formidable-hubspot] master/languages/formidable-hubspot.pot\n"
+"X-Crowdin-File-ID: 2348\n"
+"Language: ja_JP\n"
+
+#. Plugin Name of the plugin
+#: formidable-hubspot.php
+msgid "Formidable HubSpot"
+msgstr "Formidable HubSpot"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-hubspot.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-hubspot.php
+msgid "Add contacts to HubSpot from Formidable Forms"
+msgstr "Formidable Forms から HubSpot に連絡先を追加"
+
+#. Author of the plugin
+#: formidable-hubspot.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#. translators: %1$s: Minimum version HubSpot needs to work
+#: controllers/FrmHubSpotAppController.php:25
+msgid "You are running an outdated version of Formidable. This plugin needs Formidable v%1$s+ to work correctly."
+msgstr "Formidable のバージョンが古いようです。このプラグインを正しく動作させるには Formidable v%1$s以上が必要です。"
+
+#: controllers/FrmHubSpotAppController.php:255
+#: models/FrmHubSpotAction.php:16
+#: models/FrmHubSpotAction.php:130
+msgid "HubSpot"
+msgstr "HubSpot"
+
+#: controllers/FrmHubSpotHooksController.php:113
+msgid "Formidable HubSpot requires an active version of Formidable Pro."
+msgstr "Formidable HubSpot には、Formidable Pro のアクティブなバージョンが必要です。"
+
+#: formidable-hubspot.php:68
+msgid "Formidable HubSpot requires Formidable Forms to be installed."
+msgstr "Formidable HubSpot には Formidable Forms がインストールされている必要があります。"
+
+#: formidable-hubspot.php:70
+msgid "Install Formidable Forms"
+msgstr "Formidable Forms をインストール"
+
+#: helpers/FrmHubSpotEncryptionHelper.php:65
+msgid "Oops, Something is wrong with your openssl extension please contact your host provider."
+msgstr "Openssl 拡張機能で問題が発生したようです。ご利用のホスティングサービスにご連絡ください。"
+
+#: helpers/FrmHubSpotEncryptionHelper.php:92
+msgid "Oops, It seems your WordPress salt key has been changed or unreadable."
+msgstr "WordPress のソルトキーが変更されたか、読み込みできないようです。"
+
+#: models/FrmHubSpotAction.php:13
+msgid "Add to HubSpot"
+msgstr "HubSpot に追加"
+
+#: models/FrmHubSpotAPI.php:114
+msgid "Please enter your HubSpot Private App Access Token."
+msgstr "HubSpot プライベートアプリアクセストークンを入力してください。"
+
+#. translators: %1$s the error message that was returned
+#: models/FrmHubSpotAPI.php:135
+#: models/FrmHubSpotSettings.php:124
+msgid "Invalid HubSpot Private App Access Token."
+msgstr "無効な HubSpot プライベートアプリアクセストークンです。"
+
+#: models/FrmHubSpotAPI.php:163
+msgid "Your private access token could not be connected. Please check if you have valid PAT or you have an active version of cURL installed on your server."
+msgstr "プライベートアクセストークンを接続できません。有効な PAT があるか、またはサーバーに有効なバージョンの cURL がインストールされているかを確認してください。"
+
+#: models/FrmHubSpotAPI.php:338
+msgid "Please check you have an active version of cURL installed on your server."
+msgstr "サーバーに有効なバージョンの cURL がインストールされていることを確認してください。"
+
+#: models/FrmHubSpotAPI.php:505
+msgid "No HubSpot lists found."
+msgstr "HubSpot のリストは見つかりませんでした。"
+
+#: models/FrmHubSpotAPI.php:537
+msgid "HubSpot:"
+msgstr "HubSpot:"
+
+#: models/FrmHubSpotAPI.php:569
+msgid "You had an HTTP connection error"
+msgstr "HTTP 接続エラーが発生しました"
+
+#: models/FrmHubSpotOAuth.php:66
+msgid "Invalid task for ajax endpoint"
+msgstr "Ajax エンドポイントの無効なタスク"
+
+#. translators: %1$s: the fetched URL, %2$s the error message that was returned
+#: models/FrmHubSpotOAuth.php:103
+msgid "Failed to fetch: %1$s (%2$s)"
+msgstr "取得に失敗しました: %1$s (%2$s)"
+
+#: models/FrmHubSpotOAuth.php:110
+msgid "There is an issue with your access token. Please try to reauthorize the HubSpot API from the Global settings."
+msgstr "アクセストークンに問題があります。グローバル設定で HubSpot API の再認証を試してください。"
+
+#: models/FrmHubSpotOAuth.php:143
+msgid "The saved code is missing an expiration. Please deauthorize and then authorize again."
+msgstr "保存されたコードに有効期限がありません。認証を解除してから、再度認証してください。"
+
+#: models/FrmHubSpotOAuth.php:177
+msgid "Your API has been disconnected."
+msgstr "API の接続が解除されました。"
+
+#. translators: %1$s: the fetched URL, %2$s the error message that was returned
+#: models/FrmHubSpotOAuth.php:186
+msgid "Your API has been disconnected from HubSpot and there is no further action needed however following issue has been occurred in disconnection process: %1$s (%2$s)"
+msgstr "ご利用の API は HubSpot から接続が解除されました。これ以上のアクションは必要ありませんが、接続解除のプロセスで次の問題が発生しました: %1$s (%2$s)"
+
+#: models/FrmHubSpotOAuth.php:189
+msgid "HubSpot API has been successfully disconnected"
+msgstr "HubSpot API は正常に接続が解除されました。"
+
+#: models/FrmHubSpotRemoteRequest.php:197
+msgid "Unknown error"
+msgstr "不明なエラー"
+
+#. translators: %1$s: response message
+#: models/FrmHubSpotRemoteRequest.php:200
+msgid "Failed to fetch the contents: %1$s as it returned HTTP status 500."
+msgstr "コンテンツの取得に失敗しました: %1$s、HTTP ステータス500が返されました。"
+
+#. translators: %1$s: url, %2$s: status code
+#: models/FrmHubSpotRemoteRequest.php:206
+msgid "Failed to fetch the contents from the URL %1$s as it returned HTTP status %2$s."
+msgstr "HTTP ステータス %2$s を返したため、URL %1$s からのコンテンツ取得に失敗しました。"
+
+#: models/FrmHubSpotSettings.php:121
+msgid "HubSpot Private App Access Token accepted."
+msgstr "HubSpot プライベートアプリアクセストークンが承認されました。"
+
+#: models/FrmHubSpotWebhooks.php:92
+msgid "Not allowed!"
+msgstr "権限がありません!"
+
+#: models/FrmHubSpotWebhooks.php:117
+msgid "401 Unauthorized!"
+msgstr "401 Unauthorized!"
+
+#: models/FrmHubSpotWebhooks.php:123
+msgid "No Content!"
+msgstr "コンテンツがありません !"
+
+#. translators: %1$s: the fetched URL, %2$s the error message that was returned
+#: models/FrmHubSpotWebhooks.php:142
+msgid "Failed to fetch: %1$s "
+msgstr "取得に失敗しました: %1$s "
+
+#: models/FrmHubSpotWebhooks.php:164
+msgid "portal id."
+msgstr "ポータル ID。"
+
+#: models/FrmHubSpotWebhooks.php:172
+msgid "object id."
+msgstr "オブジェクト ID。"
+
+#: models/FrmHubSpotWebhooks.php:180
+msgid "signature"
+msgstr "署名"
+
+#: models/FrmHubSpotWebhooks.php:199
+msgid "Invalid Portal or Object ID"
+msgstr "無効なポータルまたはオブジェクト ID"
+
+#: views/action-settings/hubspot_options.php:9
+msgid "Clear Cache"
+msgstr "キャッシュをクリア"
+
+#: views/action-settings/hubspot_options.php:18
+msgid "List"
+msgstr "リスト"
+
+#: views/action-settings/hubspot_options.php:21
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; 選択 &mdash;"
+
+#: views/action-settings/hubspot_options.php:24
+msgid "Contact Lists"
+msgstr ""
+
+#: views/action-settings/hubspot_options.php:30
+msgid "Companies"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:85
+msgid "Limited options."
+msgstr "オプションは限られています。"
+
+#: views/settings/form.php:13
+msgid "HubSpot Authentication"
+msgstr "HubSpot 認証"
+
+#. translators: %1$s: Start link HTML %2$s: end link HTML
+#: views/settings/form.php:22
+msgid "Use the toggle to choose between Oauth and the Private App Access Token. %1$sLearn more%2$s."
+msgstr "トグルを使用して、Oauth とプライベートアプリアクセストークンのいずれかを選択します。%1$sさらに詳しく%2$s。"
+
+#: views/settings/form.php:28
+msgid "If you selected OAuth, click on the Connect button."
+msgstr "OAuth を選択した場合は、「接続」ボタンをクリックします。"
+
+#. translators: %1$s: Start link HTML %2$s: end link HTML
+#: views/settings/form.php:33
+msgid "If not using OAuth, %1$screate a Private App Access Token%2$s from your HubSpot dashboard and add it below."
+msgstr "OAuth を使用していない場合は、HubSpot のダッシュボードから %1$sプライベートアプリアクセストークンを作成%2$sし、以下に追加します。"
+
+#: views/settings/form.php:53
+msgid "Connect with OAuth"
+msgstr "OAuth で接続"
+
+#: views/settings/form.php:64
+msgid "Connect to HubSpot"
+msgstr "HubSpot に接続"
+
+#: views/settings/form.php:64
+msgid "Disconnect HubSpot"
+msgstr "HubSpot の接続を解除"
+
+#: views/settings/form.php:72
+msgid "HubSpot Private App Access Token"
+msgstr "HubSpot プライベートアプリアクセストークン"
+
+#: views/settings/form.php:82
+msgid "Save Private Access Token"
+msgstr "プライベートアクセストークンを保存"
+
+#: views/settings/form.php:92
+msgid "HubSpot API Key"
+msgstr "HubSpot API キー"
+
+#. translators: %1$s: Start link HTML HubSpot API Key %2$s: end link HTML HubSpot API Key
+#: views/settings/form.php:100
+msgid "Starting November 30, 2022, HubSpot API keys will no longer be able to be used as an authentication method to access HubSpot APIs. In addition, starting July 15, 2022, accounts without a HubSpot API key already generated will no longer be able to create one %1$s more info %2$s."
+msgstr "2022年11月30日より、HubSpot API キーは HubSpot API へのアクセスの認証方法として使用できなくなります。また、2022年7月15日以降、HubSpot API キーを生成済みでないアカウントは、HubSpot API キーを作成できなくなります。%1$sさらに詳しく%2$s。"
+

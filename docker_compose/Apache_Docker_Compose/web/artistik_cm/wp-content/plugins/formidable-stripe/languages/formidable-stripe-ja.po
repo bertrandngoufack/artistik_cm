@@ -1,0 +1,365 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable Stripe plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-stripe\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-20T18:39:47+00:00\n"
+"PO-Revision-Date: 2025-01-03 01:40\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-stripe\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /[Strategy11.formidable-stripe] master/languages/formidable-stripe.pot\n"
+"X-Crowdin-File-ID: 2452\n"
+"Language: ja_JP\n"
+
+#: controllers/FrmTransActionsController.php:183
+msgid "There was an error processing your payment."
+msgstr "支払いを処理中にエラーが発生しました。"
+
+#: controllers/FrmTransCRUDController.php:81
+msgid "Payment was Successfully Updated"
+msgstr "支払いは正常に更新されました"
+
+#: controllers/FrmTransCRUDController.php:83
+msgid "There was a problem updating that payment"
+msgstr "支払いの更新中に問題が発生しました"
+
+#: controllers/FrmTransEntriesController.php:21
+#: controllers/FrmTransListsController.php:27
+#: helpers/FrmTransListHelper.php:64
+#: views/lists/list.php:3
+#: views/payments/show.php:3
+#: views/payments/sidebar_list.php:4
+#: views/subscriptions/show.php:3
+msgid "Payments"
+msgstr "支払い"
+
+#: controllers/FrmTransEntriesController.php:22
+#: views/payments/form.php:84
+msgid "Expiration Date"
+msgstr "有効期限"
+
+#: controllers/FrmTransFieldsController.php:10
+#: views/subscriptions/show.php:85
+msgid "Gateway"
+msgstr "ゲートウェイ"
+
+#: controllers/FrmTransListsController.php:129
+msgid "No payments were selected"
+msgstr "支払いは選択されていません"
+
+#: controllers/FrmTransListsController.php:162
+msgid "Payments were Successfully Deleted"
+msgstr "支払いは正常に削除されました"
+
+#: controllers/FrmTransPaymentsController.php:38
+msgid "Payment was Successfully Created"
+msgstr "支払いは正常に作成されました"
+
+#: controllers/FrmTransPaymentsController.php:41
+msgid "There was a problem creating that payment"
+msgstr "その支払いの作成中に問題が発生しました"
+
+#: helpers/FrmTransAppHelper.php:37
+#: helpers/FrmTransAppHelper.php:38
+msgid "Manual"
+msgstr "手動"
+
+#. translators: %s: The current trans type, either payments/subscriptions
+#: helpers/FrmTransListHelper.php:432
+msgid "ALL selected %s in this form will be permanently deleted. Want to proceed?"
+msgstr "このフォームで選択された%sはすべて完全に削除されます。続行しますか ?"
+
+#: models/FrmTransAction.php:186
+msgid "Canceled and Expired"
+msgstr "キャンセル済みで期限切れです"
+
+#: models/FrmTransAction.php:207
+msgid "&mdash; Select Field &mdash;"
+msgstr "&mdash; フィールドを選択 &mdash;"
+
+#: models/FrmTransAction.php:290
+msgid "payment"
+msgstr "支払い"
+
+#: views/action-settings/options.php:92
+msgid "Later (collect manually)"
+msgstr "後で行う (手動で回収)"
+
+#: views/action-settings/options.php:116
+msgid "Gateway(s)"
+msgstr "ゲートウェイ"
+
+#: views/action-settings/options.php:147
+msgid "Bank Account Details"
+msgstr "銀行口座情報"
+
+#: views/action-settings/options.php:153
+msgid "Routing Number"
+msgstr "ルーティングナンバー"
+
+#: views/action-settings/options.php:159
+msgid "Account Number"
+msgstr "口座番号"
+
+#: views/action-settings/options.php:165
+msgid "Bank Name"
+msgstr "銀行名"
+
+#: views/action-settings/options.php:202
+#: views/action-settings/options.php:245
+msgid "Company"
+msgstr "会社"
+
+#: views/action-settings/options.php:210
+msgid "Shipping Information"
+msgstr "配送情報"
+
+#: views/action-settings/options.php:211
+msgid "Select the fields to associate with the customer shipping information."
+msgstr "顧客の配送情報に関連付けるフィールドを選択します。"
+
+#: views/action-settings/options.php:216
+msgid "Shipping"
+msgstr "配送先"
+
+#: views/action-settings/options.php:219
+msgid "Collect shipping information with this form"
+msgstr "このフォームで配送情報を収集"
+
+#: views/action-settings/options.php:252
+msgid "After Payment"
+msgstr "支払い後"
+
+#: views/action-settings/options.php:253
+msgid "Change a field value when the status of a payment changes."
+msgstr "支払いのステータスが変更されたときにフィールドの値を変更します。"
+
+#: views/action-settings/options.php:259
+msgid "Add"
+msgstr "追加"
+
+#: views/action-settings/options.php:266
+msgid "Payment Status"
+msgstr "支払いステータス"
+
+#: views/action-settings/options.php:267
+msgid "Field"
+msgstr "フィールド"
+
+#: views/action-settings/options.php:268
+msgid "Value"
+msgstr "値"
+
+#: views/fields/gateway-back-end.php:6
+msgid "Do not delete this field. It will be hidden in your form but is required to process payments."
+msgstr "このフィールドは削除しないでください。フォームには表示されませんが、支払い処理に必要です。"
+
+#: views/payments/edit.php:3
+msgid "Edit Payment"
+msgstr "支払いを編集"
+
+#: views/payments/edit.php:14
+#: views/payments/new.php:12
+msgid "Publish"
+msgstr "公開"
+
+#: views/payments/form.php:62
+msgid "Subscription Number:"
+msgstr "サブスクリプション番号:"
+
+#: views/payments/new.php:3
+msgid "New Payment"
+msgstr "新規支払い"
+
+#. Plugin Name of the plugin
+#: formidable-stripe.php
+msgid "Formidable Stripe"
+msgstr "Formidable Stripe"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-stripe.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-stripe.php
+msgid "Collect Stripe payments using your Formidable Forms"
+msgstr "Formidable Forms を使用して Stripe の支払いを回収する"
+
+#. Author of the plugin
+#: formidable-stripe.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#: controllers/FrmStrpActionsController.php:151
+msgid "The Stripe Token is missing."
+msgstr "Stripe トークンがありません。"
+
+#: controllers/FrmStrpPaymentsController.php:38
+msgid "Delete card"
+msgstr "カードを削除"
+
+#: controllers/FrmStrpPaymentsController.php:99
+msgid "Capture now"
+msgstr "今すぐキャプチャー"
+
+#: controllers/FrmStrpPaymentsController.php:123
+msgid "Captured"
+msgstr "キャプチャー済み"
+
+#: controllers/FrmStrpPaymentsController.php:128
+msgid "Oops! No payment was selected for the charge."
+msgstr "請求の対象となる支払いが選択されていません。"
+
+#: controllers/FrmStrpSettingsController.php:60
+msgid "Test Publishable Key"
+msgstr "テストの公開キー"
+
+#: controllers/FrmStrpSettingsController.php:61
+msgid "Test Secret Key"
+msgstr "テストのシークレットキー"
+
+#: controllers/FrmStrpSettingsController.php:65
+msgid "Live Publishable Key"
+msgstr "ライブの公開キー"
+
+#: controllers/FrmStrpSettingsController.php:66
+msgid "Live Secret Key"
+msgstr "ライブのシークレットキー"
+
+#: helpers/FrmStrpApiHelper.php:676
+msgid "The card number is incorrect."
+msgstr "カード番号が正しくありません。"
+
+#: helpers/FrmStrpApiHelper.php:677
+msgid "The card number is not a valid credit card number."
+msgstr "カード番号が有効なクレジットカード番号ではありません。"
+
+#: helpers/FrmStrpApiHelper.php:678
+msgid "The card's expiration month is invalid."
+msgstr "カードの有効期限月が無効です。"
+
+#: helpers/FrmStrpApiHelper.php:679
+msgid "The card's expiration year is invalid."
+msgstr "カードの有効期限年が無効です。"
+
+#: helpers/FrmStrpApiHelper.php:680
+msgid "The card's security code is invalid."
+msgstr "カードのセキュリティコードが無効です。"
+
+#: helpers/FrmStrpApiHelper.php:681
+msgid "The card has expired."
+msgstr "カードの有効期限が切れています。"
+
+#: helpers/FrmStrpApiHelper.php:682
+msgid "The card's security code is incorrect."
+msgstr "カードのセキュリティコードが正しくありません。"
+
+#: helpers/FrmStrpApiHelper.php:683
+msgid "The card's zip code failed validation."
+msgstr "カードの郵便番号の検証に失敗しました。"
+
+#: helpers/FrmStrpApiHelper.php:684
+msgid "The card was declined."
+msgstr "カードが拒否されました。"
+
+#: helpers/FrmStrpApiHelper.php:685
+msgid "There is no card on a customer that is being charged."
+msgstr "請求の対象となる顧客のカードがありません。"
+
+#: helpers/FrmStrpApiHelper.php:686
+msgid "An error occurred while processing the card."
+msgstr "カードの処理中にエラーが発生しました。"
+
+#: helpers/FrmStrpApiHelper.php:687
+msgid "An error occurred due to requests hitting the API too quickly. Please let us know if you're consistently running into this error."
+msgstr "API に対するリクエストが頻繁すぎるためエラーが発生しました。このエラーが常に発生する場合は当社までお知らせください。"
+
+#: helpers/FrmStrpApiHelper.php:688
+msgid "The card's swipe data is invalid."
+msgstr "カードのスワイプデータが無効です。"
+
+#: helpers/FrmStrpApiHelper.php:689
+msgid "Too many requests hit the API too quickly."
+msgstr "短期間に API に対して行なわれたリクエストが多すぎます。"
+
+#: helpers/FrmStrpApiHelper.php:690
+msgid "Invalid request errors arise when your request has invalid parameters."
+msgstr "リクエストに無効なパラメータが含まれていた場合、無効リクエストエラーが発生します。"
+
+#: helpers/FrmStrpApiHelper.php:691
+msgid "Failed to properly authenticate in the request."
+msgstr "リクエストを適切に認証できませんでした。"
+
+#: helpers/FrmStrpApiHelper.php:692
+msgid "Failed to connect to Stripe's API. This usually means you have an issue with TLS 1.2 on your server."
+msgstr "Stripe の API への接続に失敗しました。これは通常、サーバーの TLS 1.2に問題があることを意味します。"
+
+#: helpers/FrmStrpConnectHelper.php:782
+msgid "Unable to delete card"
+msgstr "カードを削除できません"
+
+#: helpers/FrmStrpSubscriptionHelper.php:113
+msgid "Invalid payment limit value %s"
+msgstr "無効な支払限度額 %s"
+
+#. translators: %1$s: Anchor open tag, %2$s: Anchor close tag.
+#: views/action-settings/options.php:35
+msgid "Enable %1$sStripe link%2$s and additional payment methods."
+msgstr "%1$sStripe リンク%2$sおよび追加の支払い方法を有効にします。"
+
+#: views/payments/manage-cards.php:4
+msgid "Card ending in"
+msgstr "カードの末尾"
+
+#: views/payments/manage-cards.php:5
+msgid "Expires"
+msgstr "期限"
+
+#: views/payments/sidebar_actions.php:4
+msgid "Authorized:"
+msgstr "投稿者"
+
+#: views/settings/form.php:4
+msgid "Process One-time Payments"
+msgstr "一括払いの処理"
+
+#: views/settings/form.php:9
+msgid "Before entry is created."
+msgstr "エントリー作成前。"
+
+#: views/settings/form.php:13
+msgid "After entry is created."
+msgstr "エントリー作成後。"
+
+#: views/settings/form.php:14
+msgid "Select if your site is using conditional logic on the payment form action or PHP customizations to set the price. If a form has multiple payment form actions, choose this option."
+msgstr "サイトで価格を設定する際に、支払いフォームアクションの条件付きロジックまたは PHP カスタマイズを使用する場合に選択します。フォームに複数の支払いフォームアクションがある場合、このオプションを選択してください。"
+
+#: views/settings/form.php:43
+msgid "After June, Stripe will no longer allow keys."
+msgstr "6月以降、Stripe ではキーが使用できません。"
+
+#: views/settings/form.php:45
+msgid "Stripe no longer supports API keys. Support for API keys will be fully removed in the next release of Formidable Stripe."
+msgstr "Stripe は API キーのサポートを終了しました。API キーのサポートは、Formidable Stripe の次のリリースで完全に削除されます。"
+
+#: views/settings/form.php:63
+msgid "Automatic Processing"
+msgstr "自動処理"
+
+#: views/settings/form.php:66
+msgid "Stripe notifies your site of any recurring payments, refunds issued, and failed payments. In order to receive these notifications, you must add a new Webhook URL for your site in your Stripe Dashboard > Settings > Webhooks. The URL should be set to:"
+msgstr "Stripe では、定期支払い、払い戻し、支払い失敗があった場合はサイトに通知します。これらの通知を受け取るには、Stripe ダッシュボード >「設定」 > 「Webhook」で、サイトに新しい Webhook URL を追加する必要があります。URL は次のように設定します:"
+

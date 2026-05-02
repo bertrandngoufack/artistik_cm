@@ -1,0 +1,156 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable Conversational Forms plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-chat\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-04-18T15:28:00+00:00\n"
+"PO-Revision-Date: 2024-04-29 20:56\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-chat\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: es\n"
+"X-Crowdin-File: /[Strategy11.formidable-chat] main/languages/formidable-chat.pot\n"
+"X-Crowdin-File-ID: 2488\n"
+"Language: es_ES\n"
+
+#. Plugin Name of the plugin
+#: formidable-chat.php
+msgid "Formidable Conversational Forms"
+msgstr "Formidable Conversational Forms"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-chat.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-chat.php
+msgid "Ask one question at a time for automated conversations."
+msgstr "Haz una pregunta cada vez para las conversaciones automatizadas."
+
+#. Author of the plugin
+#: formidable-chat.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#: classes/helpers/FrmChatHtmlHelper.php:492
+msgid "Previous"
+msgstr "Anterior"
+
+#: classes/helpers/FrmChatHtmlHelper.php:493
+#: classes/helpers/FrmChatHtmlHelper.php:560
+#: views/settings/settings.php:103
+msgid "Continue"
+msgstr "Continuar"
+
+#: classes/helpers/FrmChatHtmlHelper.php:558
+#: views/settings/settings.php:110
+msgid "Start"
+msgstr "Inicio"
+
+#: classes/helpers/FrmChatHtmlHelper.php:562
+msgid "Submit"
+msgstr "Enviar"
+
+#: classes/helpers/FrmChatHtmlHelper.php:594
+msgid "Use %1$s to go back"
+msgstr "Utiliza %1$s para volver atrás"
+
+#: classes/helpers/FrmChatHtmlHelper.php:595
+msgid "Shift+Tab"
+msgstr "Mayús+Tab"
+
+#: classes/helpers/FrmChatHtmlHelper.php:641
+msgid "%1$s of %2$s"
+msgstr "%1$s de %2$s"
+
+#: classes/helpers/FrmChatHtmlHelper.php:987
+msgid "press"
+msgstr "pulsa"
+
+#: classes/helpers/FrmChatHtmlHelper.php:987
+msgid "Enter"
+msgstr "Entrar"
+
+#: formidable-chat.php:70
+msgid "Formidable Conversational Forms requires Formidable Forms to be installed."
+msgstr "Formidable Conversational Forms requiere que Formidable Forms esté instalado."
+
+#: formidable-chat.php:72
+msgid "Install Formidable Forms"
+msgstr "Instalar Formidable Forms"
+
+#: formidable-chat.php:85
+msgid "Formidable Conversational Forms requires Formidable Forms Pro to be installed."
+msgstr "Formidable Conversational Forms requiere que Formidable Forms Pro esté instalado."
+
+#: views/settings/settings.php:7
+msgid "Convert a classic form into modern lead generators with one question at a time."
+msgstr "Convierte un formulario clásico en modernos generadores de leads con una pregunta cada vez."
+
+#: views/settings/settings.php:23
+msgid "Turn on conversational form mode"
+msgstr "Activa el modo de formulario conversacional"
+
+#: views/settings/settings.php:29
+msgid "enables JavaScript validation"
+msgstr "activa la validación de JavaScript"
+
+#: views/settings/settings.php:32
+msgid "disables saving drafts"
+msgstr "desactiva guardar borradores"
+
+#. translators: %s the other settings that will change when conversational forms are enabled.
+#: views/settings/settings.php:36
+msgid "(this %s)"
+msgstr "(este %s)"
+
+#: views/settings/settings.php:37
+msgid "and"
+msgstr "y"
+
+#: views/settings/settings.php:58
+msgid "Include arrow button navigation"
+msgstr "Incluir botón de flecha de navegación"
+
+#: views/settings/settings.php:82
+msgid "Show start page"
+msgstr "Mostrar página de inicio"
+
+#: views/settings/settings.php:87
+msgid "Type of Progress Bar"
+msgstr "Tipo de barra de progreso"
+
+#: views/settings/settings.php:92
+msgid "None"
+msgstr "Ninguno"
+
+#: views/settings/settings.php:93
+msgid "Progress Bar"
+msgstr "Barra de progreso"
+
+#: views/settings/settings.php:94
+msgid "Text"
+msgstr "Texto"
+
+#: views/settings/settings.php:95
+msgid "Progress Bar and Text"
+msgstr "Barra de progreso y texto"
+
+#: views/settings/settings.php:101
+msgid "Continue Button Text"
+msgstr "Texto del botón Continuar"
+
+#: views/settings/settings.php:108
+msgid "Start Button Text"
+msgstr "Texto del botón de inicio"
+

@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+    ServerAdmin ${APACHE_SERVER_ADMIN}
+    DocumentRoot ${APACHE_DOCUMENT_ROOT}
+
+    <Directory ${APACHE_DOCUMENT_ROOT}>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+
+        <FilesMatch "\.(env|ini|log|sh|sql|bak|config)$">
+            Require all denied
+        </FilesMatch>
+    </Directory>
+
+    ErrorDocument 404 ${APACHE_ERROR_DOCUMENT_404}
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    SetOutputFilter DEFLATE
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</VirtualHost>

@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-10T14:22:04+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: formidable-payments\n"
+
+#: controllers/FrmTransCRUDController.php:100
+msgid "Payment was Successfully Updated"
+msgstr ""
+
+#: controllers/FrmTransCRUDController.php:102
+msgid "There was a problem updating that payment"
+msgstr ""
+
+#: controllers/FrmTransEntriesController.php:24
+#: controllers/FrmTransListsController.php:30
+#: controllers/FrmTransPaymentsController.php:14
+#: helpers/FrmTransListHelper.php:72
+#: views/lists/list.php:8
+#: views/payments/show.php:8
+#: views/payments/sidebar_list.php:8
+#: views/subscriptions/show.php:8
+msgid "Payments"
+msgstr ""
+
+#: controllers/FrmTransEntriesController.php:25
+#: views/payments/form.php:89
+msgid "Expiration Date"
+msgstr ""
+
+#: controllers/FrmTransFieldsController.php:13
+#: views/subscriptions/show.php:90
+msgid "Gateway"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:132
+msgid "No payments were selected"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:165
+msgid "Payments were Successfully Deleted"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:42
+msgid "Payment was Successfully Created"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:45
+msgid "There was a problem creating that payment"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:40
+#: helpers/FrmTransAppHelper.php:41
+msgid "Manual"
+msgstr ""
+
+#: helpers/FrmTransListHelper.php:26
+msgid "Subscriptions list"
+msgstr ""
+
+#. translators: %s: The current trans type, either payments/subscriptions
+#: helpers/FrmTransListHelper.php:448
+msgid "ALL selected %s in this form will be permanently deleted. Want to proceed?"
+msgstr ""
+
+#: models/FrmTransAction.php:189
+msgid "Canceled and Expired"
+msgstr ""
+
+#: models/FrmTransAction.php:210
+msgid "&mdash; Select Field &mdash;"
+msgstr ""
+
+#: models/FrmTransAction.php:317
+msgid "payment"
+msgstr ""
+
+#: views/action-settings/options.php:98
+msgid "Later (collect manually)"
+msgstr ""
+
+#: views/action-settings/options.php:168
+msgid "Bank Account Details"
+msgstr ""
+
+#: views/action-settings/options.php:174
+msgid "Routing Number"
+msgstr ""
+
+#: views/action-settings/options.php:180
+msgid "Account Number"
+msgstr ""
+
+#: views/action-settings/options.php:186
+msgid "Bank Name"
+msgstr ""
+
+#: views/action-settings/options.php:223
+#: views/action-settings/options.php:266
+msgid "Company"
+msgstr ""
+
+#: views/action-settings/options.php:231
+msgid "Shipping Information"
+msgstr ""
+
+#: views/action-settings/options.php:232
+msgid "Select the fields to associate with the customer shipping information."
+msgstr ""
+
+#: views/action-settings/options.php:237
+msgid "Shipping"
+msgstr ""
+
+#: views/action-settings/options.php:240
+msgid "Collect shipping information with this form"
+msgstr ""
+
+#: views/action-settings/options.php:273
+msgid "After Payment"
+msgstr ""
+
+#: views/action-settings/options.php:274
+msgid "Change a field value when the status of a payment changes."
+msgstr ""
+
+#: views/action-settings/options.php:280
+msgid "Add"
+msgstr ""
+
+#: views/action-settings/options.php:287
+msgid "Payment Status"
+msgstr ""
+
+#: views/action-settings/options.php:288
+msgid "Field"
+msgstr ""
+
+#: views/action-settings/options.php:289
+msgid "Value"
+msgstr ""
+
+#: views/fields/gateway-back-end.php:9
+msgid "Do not delete this field. It will be hidden in your form but is required to process payments."
+msgstr ""
+
+#: views/payments/edit.php:19
+#: views/payments/new.php:17
+msgid "Publish"
+msgstr ""
+
+#: views/payments/form.php:67
+msgid "Subscription Number:"
+msgstr ""
+
+#: views/payments/new.php:8
+msgid "New Payment"
+msgstr ""

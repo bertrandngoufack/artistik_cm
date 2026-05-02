@@ -1,0 +1,261 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable HubSpot plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-hubspot\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-06-07T16:44:07+00:00\n"
+"PO-Revision-Date: 2024-06-08 01:31\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-hubspot\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /[Strategy11.formidable-hubspot] master/languages/formidable-hubspot.pot\n"
+"X-Crowdin-File-ID: 2348\n"
+"Language: it_IT\n"
+
+#. Plugin Name of the plugin
+#: formidable-hubspot.php
+msgid "Formidable HubSpot"
+msgstr "Formidable HubSpot"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-hubspot.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-hubspot.php
+msgid "Add contacts to HubSpot from Formidable Forms"
+msgstr "Aggiungi contatti a HubSpot da Formidable Forms"
+
+#. Author of the plugin
+#: formidable-hubspot.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#. translators: %1$s: Minimum version HubSpot needs to work
+#: controllers/FrmHubSpotAppController.php:25
+msgid "You are running an outdated version of Formidable. This plugin needs Formidable v%1$s+ to work correctly."
+msgstr "Stai usando una versione non aggiornata di Formidable. Questo plugin ha bisogno di Formidable v%1$s o successiva per funzionare correttamente."
+
+#: controllers/FrmHubSpotAppController.php:255
+#: models/FrmHubSpotAction.php:16
+#: models/FrmHubSpotAction.php:130
+msgid "HubSpot"
+msgstr "HubSpot"
+
+#: controllers/FrmHubSpotHooksController.php:113
+msgid "Formidable HubSpot requires an active version of Formidable Pro."
+msgstr "Formidable HubSpot richiede una versione attiva di Formidable Pro."
+
+#: formidable-hubspot.php:68
+msgid "Formidable HubSpot requires Formidable Forms to be installed."
+msgstr "Formidable HubSpot richiede l'installazione di Formidable Forms."
+
+#: formidable-hubspot.php:70
+msgid "Install Formidable Forms"
+msgstr "Installa Formidable Forms"
+
+#: helpers/FrmHubSpotEncryptionHelper.php:65
+msgid "Oops, Something is wrong with your openssl extension please contact your host provider."
+msgstr "Ops, c'è qualcosa che non va con la tua estensione openssl. Contatta il tuo host."
+
+#: helpers/FrmHubSpotEncryptionHelper.php:92
+msgid "Oops, It seems your WordPress salt key has been changed or unreadable."
+msgstr "Ops, sembra che la chiave salt di WordPress sia stata modificata o sia illeggibile."
+
+#: models/FrmHubSpotAction.php:13
+msgid "Add to HubSpot"
+msgstr "Aggiungi a HubSpot"
+
+#: models/FrmHubSpotAPI.php:114
+msgid "Please enter your HubSpot Private App Access Token."
+msgstr "Inserisci il tuo token di accesso all'app privata di HubSpot."
+
+#. translators: %1$s the error message that was returned
+#: models/FrmHubSpotAPI.php:135
+#: models/FrmHubSpotSettings.php:124
+msgid "Invalid HubSpot Private App Access Token."
+msgstr "Token di accesso all'app privata di HubSpot non valido."
+
+#: models/FrmHubSpotAPI.php:163
+msgid "Your private access token could not be connected. Please check if you have valid PAT or you have an active version of cURL installed on your server."
+msgstr "Non è stato possibile connettere il tuo token di accesso privato. Verifica di avere un PAT valido o di avere una versione attiva di cURL installata sul tuo server."
+
+#: models/FrmHubSpotAPI.php:338
+msgid "Please check you have an active version of cURL installed on your server."
+msgstr "Verifica di avere una versione attiva di cURL installata sul tuo server."
+
+#: models/FrmHubSpotAPI.php:505
+msgid "No HubSpot lists found."
+msgstr "Non sono state trovate liste HubSpot."
+
+#: models/FrmHubSpotAPI.php:537
+msgid "HubSpot:"
+msgstr "HubSpot:"
+
+#: models/FrmHubSpotAPI.php:569
+msgid "You had an HTTP connection error"
+msgstr "Si è verificato un errore di connessione HTTP"
+
+#: models/FrmHubSpotOAuth.php:66
+msgid "Invalid task for ajax endpoint"
+msgstr "Attività non valida per l'endpoint ajax"
+
+#. translators: %1$s: the fetched URL, %2$s the error message that was returned
+#: models/FrmHubSpotOAuth.php:103
+msgid "Failed to fetch: %1$s (%2$s)"
+msgstr "Impossibile recuperare: %1$s (%2$s)"
+
+#: models/FrmHubSpotOAuth.php:110
+msgid "There is an issue with your access token. Please try to reauthorize the HubSpot API from the Global settings."
+msgstr "Si è verificato un problema con il tuo token di accesso. Prova a riautorizzare l'API di HubSpot dalle impostazioni globali."
+
+#: models/FrmHubSpotOAuth.php:143
+msgid "The saved code is missing an expiration. Please deauthorize and then authorize again."
+msgstr "Al codice salvato manca la scadenza. Disautorizza e autorizza di nuovo."
+
+#: models/FrmHubSpotOAuth.php:177
+msgid "Your API has been disconnected."
+msgstr "Il tuo API è stato disconnesso."
+
+#. translators: %1$s: the fetched URL, %2$s the error message that was returned
+#: models/FrmHubSpotOAuth.php:186
+msgid "Your API has been disconnected from HubSpot and there is no further action needed however following issue has been occurred in disconnection process: %1$s (%2$s)"
+msgstr "La tua API è stata scollegata da HubSpot e non sono necessarie ulteriori azioni. Durante il processo di disconnessione, però, si è verificato il seguente problema: %1$s (%2$s)"
+
+#: models/FrmHubSpotOAuth.php:189
+msgid "HubSpot API has been successfully disconnected"
+msgstr "L'API di HubSpot è stata scollegata con successo"
+
+#: models/FrmHubSpotRemoteRequest.php:197
+msgid "Unknown error"
+msgstr "Errore sconosciuto"
+
+#. translators: %1$s: response message
+#: models/FrmHubSpotRemoteRequest.php:200
+msgid "Failed to fetch the contents: %1$s as it returned HTTP status 500."
+msgstr "Non è stato possibile recuperare il contenuto %1$s poiché ha restituito lo stato HTTP 500."
+
+#. translators: %1$s: url, %2$s: status code
+#: models/FrmHubSpotRemoteRequest.php:206
+msgid "Failed to fetch the contents from the URL %1$s as it returned HTTP status %2$s."
+msgstr "Non è stato possibile recuperare il contenuto dell'URL %1$s poiché ha restituito lo stato HTTP %2$s."
+
+#: models/FrmHubSpotSettings.php:121
+msgid "HubSpot Private App Access Token accepted."
+msgstr "Token di accesso all'app privata di HubSpot accettato."
+
+#: models/FrmHubSpotWebhooks.php:92
+msgid "Not allowed!"
+msgstr "Non è consentito!"
+
+#: models/FrmHubSpotWebhooks.php:117
+msgid "401 Unauthorized!"
+msgstr "401 Non autorizzato!"
+
+#: models/FrmHubSpotWebhooks.php:123
+msgid "No Content!"
+msgstr "Nessun contenuto!"
+
+#. translators: %1$s: the fetched URL, %2$s the error message that was returned
+#: models/FrmHubSpotWebhooks.php:142
+msgid "Failed to fetch: %1$s "
+msgstr "Non è riuscito a recuperare: %1$s "
+
+#: models/FrmHubSpotWebhooks.php:164
+msgid "portal id."
+msgstr "ID del portale."
+
+#: models/FrmHubSpotWebhooks.php:172
+msgid "object id."
+msgstr "ID dell'oggetto."
+
+#: models/FrmHubSpotWebhooks.php:180
+msgid "signature"
+msgstr "firma"
+
+#: models/FrmHubSpotWebhooks.php:199
+msgid "Invalid Portal or Object ID"
+msgstr "ID del portale o dell'oggetto non valido"
+
+#: views/action-settings/hubspot_options.php:9
+msgid "Clear Cache"
+msgstr "Cancella la cache"
+
+#: views/action-settings/hubspot_options.php:18
+msgid "List"
+msgstr "Elenco"
+
+#: views/action-settings/hubspot_options.php:21
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Seleziona &mdash;"
+
+#: views/action-settings/hubspot_options.php:24
+msgid "Contact Lists"
+msgstr ""
+
+#: views/action-settings/hubspot_options.php:30
+msgid "Companies"
+msgstr ""
+
+#: views/action-settings/_match_fields.php:85
+msgid "Limited options."
+msgstr "Opzioni limitate."
+
+#: views/settings/form.php:13
+msgid "HubSpot Authentication"
+msgstr "Autenticazione HubSpot"
+
+#. translators: %1$s: Start link HTML %2$s: end link HTML
+#: views/settings/form.php:22
+msgid "Use the toggle to choose between Oauth and the Private App Access Token. %1$sLearn more%2$s."
+msgstr "Usa il commutatore per scegliere tra Oauth e il token di accesso all'app privata. %1$sPer saperne di più%2$s."
+
+#: views/settings/form.php:28
+msgid "If you selected OAuth, click on the Connect button."
+msgstr "Se hai selezionato OAuth, fai clic sul pulsante Connetti."
+
+#. translators: %1$s: Start link HTML %2$s: end link HTML
+#: views/settings/form.php:33
+msgid "If not using OAuth, %1$screate a Private App Access Token%2$s from your HubSpot dashboard and add it below."
+msgstr "Se non usi OAuth, %1$screa un token di accesso privato all'app%2$s dalla tua bacheca HubSpot e aggiungilo qui sotto."
+
+#: views/settings/form.php:53
+msgid "Connect with OAuth"
+msgstr "Connetti con OAuth"
+
+#: views/settings/form.php:64
+msgid "Connect to HubSpot"
+msgstr "Collegati a HubSpot"
+
+#: views/settings/form.php:64
+msgid "Disconnect HubSpot"
+msgstr "Disconnetti HubSpot"
+
+#: views/settings/form.php:72
+msgid "HubSpot Private App Access Token"
+msgstr "Token di accesso all'app privata di HubSpot"
+
+#: views/settings/form.php:82
+msgid "Save Private Access Token"
+msgstr "Salva il token di accesso privato"
+
+#: views/settings/form.php:92
+msgid "HubSpot API Key"
+msgstr "Chiave API HubSpot"
+
+#. translators: %1$s: Start link HTML HubSpot API Key %2$s: end link HTML HubSpot API Key
+#: views/settings/form.php:100
+msgid "Starting November 30, 2022, HubSpot API keys will no longer be able to be used as an authentication method to access HubSpot APIs. In addition, starting July 15, 2022, accounts without a HubSpot API key already generated will no longer be able to create one %1$s more info %2$s."
+msgstr "A partire dal 30 novembre 2022, le chiavi API di HubSpot si non potranno più usare come metodo di autenticazione per accedere alle API di HubSpot. Inoltre, a partire dal 15 luglio 2022, gli account che non hanno una chiave API HubSpot già generata non potranno più crearne una. %1$s Ulteriori informazioni %2$s."
+

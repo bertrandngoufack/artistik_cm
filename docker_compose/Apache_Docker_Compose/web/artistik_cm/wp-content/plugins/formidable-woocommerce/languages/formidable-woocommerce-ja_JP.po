@@ -1,0 +1,149 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-woocommerce\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-20T14:41:44+00:00\n"
+"PO-Revision-Date: 2024-08-21 00:53\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: formidable-woocommerce\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /[Strategy11.formidable-woocommerce] master/languages/formidable-woocommerce.pot\n"
+"X-Crowdin-File-ID: 2440\n"
+"Language: ja_JP\n"
+
+#. Plugin Name of the plugin
+#: formidable-woocommerce.php
+msgid "Formidable WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-woocommerce.php
+msgid "https://formidableforms.com"
+msgstr "https://formidableforms.com/ja"
+
+#. Description of the plugin
+#: formidable-woocommerce.php
+msgid "Use Formidable Forms on individual WooCommerce product pages to create customizable products. Requires the Formidable Forms plugin."
+msgstr "WooCommerce の個々の商品ページで Formidable Forms を使ってカスタマイズ可能な商品を作成しましょう。Formidable Forms プラグインが必要です。"
+
+#. Author of the plugin
+#: formidable-woocommerce.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#: classes/class-wc-formidable-admin.php:42
+msgid "Choose Form"
+msgstr "フォームを選択"
+
+#: classes/class-wc-formidable-admin.php:64
+msgid "None"
+msgstr "なし"
+
+#: classes/class-wc-formidable-admin.php:68
+msgid "Edit"
+msgstr "編集"
+
+#: classes/class-wc-formidable-admin.php:68
+msgid "Formidable Form"
+msgstr "Formidable フォーム"
+
+#: classes/class-wc-formidable-admin.php:75
+msgid "Use the total in the form without adding the product price."
+msgstr "商品価格を加算せずに、フォームの合計を使用"
+
+#: classes/class-wc-formidable-admin.php:118
+msgid "Entry"
+msgstr "投稿"
+
+#: classes/class-wc-formidable-product.php:224
+msgid "Select Options"
+msgstr "オプションを選択"
+
+#: classes/class-wc-formidable-product.php:1027
+msgid "Total:"
+msgstr "合計:"
+
+#: classes/class-wc-formidable-product.php:1051
+msgid "WooCommerce order completed"
+msgstr ""
+
+#: classes/class-wc-formidable-product.php:1052
+msgid "WooCommerce payment"
+msgstr "WooCommerce 決済"
+
+#: classes/class-wc-formidable-product.php:1053
+msgid "WooCommerce pending order"
+msgstr ""
+
+#. translators: %s: required plugin(s)
+#: formidable-woocommerce.php:142
+msgid "Formidable WooCommerce addon requires an active version of %s."
+msgstr ""
+
+#: views/settings/registration.php:8
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: views/settings/registration.php:11
+msgid "Account Creation"
+msgstr ""
+
+#: views/settings/registration.php:12
+msgid "This setting must be enabled in order to show the selected registration form."
+msgstr ""
+
+#: views/settings/registration.php:23
+msgid "Allow customers to create an account on the \"My account\" page"
+msgstr "「マイアカウント」ページで、お客様がアカウントを作成できるようにします。"
+
+#: views/settings/registration.php:25
+msgid "[Edit in WooCommerce]"
+msgstr ""
+
+#: views/settings/registration.php:31
+msgid "Select Registration Form"
+msgstr ""
+
+#: views/settings/registration.php:32
+msgid "Select a registration form to replace the WooCommerce registration form. The login form will also be replaced."
+msgstr ""
+
+#: views/settings/registration.php:39
+msgid "Don't replace the WooCommerce registration form"
+msgstr ""
+
+#: views/settings/registration.php:47
+msgid "Select Profile Form"
+msgstr ""
+
+#: views/settings/registration.php:48
+msgid "The selected form will replace the profile form on the WooCoomerce My Account page."
+msgstr ""
+
+#: views/settings/registration.php:55
+msgid "Don't replace the WooCommerce profile form"
+msgstr ""
+
+#: views/templates/form-login.php:14
+msgid "Login"
+msgstr "ログイン"
+
+#: views/templates/form-login.php:18
+msgid "Username or email address"
+msgstr "ユーザー名またはメールアドレス"
+
+#: views/templates/form-login.php:27
+msgid "Register"
+msgstr "登録"
+

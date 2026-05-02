@@ -1,0 +1,362 @@
+# Copyright (C) 2025 Strategy11
+# This file is distributed under the same license as the Formidable Stripe plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-stripe\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-24T19:07:28+00:00\n"
+"PO-Revision-Date: 2025-01-25 03:30\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: formidable-stripe\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /[Strategy11.formidable-stripe] master/languages/formidable-stripe.pot\n"
+"X-Crowdin-File-ID: 2452\n"
+"Language: fr_FR\n"
+
+#: controllers/FrmTransCRUDController.php:97
+msgid "Payment was Successfully Updated"
+msgstr "Le paiement a bien été mis à jour"
+
+#: controllers/FrmTransCRUDController.php:99
+msgid "There was a problem updating that payment"
+msgstr "Un problème est survenu lors de la mise à jour de ce paiement"
+
+#: controllers/FrmTransEntriesController.php:21
+#: controllers/FrmTransListsController.php:27
+#: controllers/FrmTransPaymentsController.php:11
+#: helpers/FrmTransListHelper.php:69
+#: views/lists/list.php:3
+#: views/payments/show.php:3
+#: views/payments/sidebar_list.php:4
+#: views/subscriptions/show.php:3
+msgid "Payments"
+msgstr "Paiements"
+
+#: controllers/FrmTransEntriesController.php:22
+#: views/payments/form.php:84
+msgid "Expiration Date"
+msgstr "Date d’expiration"
+
+#: controllers/FrmTransFieldsController.php:10
+#: views/subscriptions/show.php:85
+msgid "Gateway"
+msgstr "Passerelle"
+
+#: controllers/FrmTransListsController.php:129
+msgid "No payments were selected"
+msgstr "Aucun paiement n’a été sélectionné"
+
+#: controllers/FrmTransListsController.php:162
+msgid "Payments were Successfully Deleted"
+msgstr "Les paiements ont bien été supprimés"
+
+#: controllers/FrmTransPaymentsController.php:39
+msgid "Payment was Successfully Created"
+msgstr "Le paiement a bien été créé"
+
+#: controllers/FrmTransPaymentsController.php:42
+msgid "There was a problem creating that payment"
+msgstr "Un problème est survenu lors de la création de ce paiement"
+
+#: helpers/FrmTransAppHelper.php:37
+#: helpers/FrmTransAppHelper.php:38
+msgid "Manual"
+msgstr "Manuelle"
+
+#: helpers/FrmTransListHelper.php:23
+msgid "Subscriptions list"
+msgstr ""
+
+#. translators: %s: The current trans type, either payments/subscriptions
+#: helpers/FrmTransListHelper.php:437
+msgid "ALL selected %s in this form will be permanently deleted. Want to proceed?"
+msgstr "TOUS les %s sélectionnés dans ce formulaire seront définitivement supprimés. Voulez-vous continuer ?"
+
+#: models/FrmTransAction.php:186
+msgid "Canceled and Expired"
+msgstr "Annulé et Expiré"
+
+#: models/FrmTransAction.php:207
+msgid "&mdash; Select Field &mdash;"
+msgstr "&mdash; Sélectionner un champ &mdash;"
+
+#: models/FrmTransAction.php:299
+msgid "payment"
+msgstr "paiement"
+
+#: views/action-settings/options.php:92
+msgid "Later (collect manually)"
+msgstr "Plus tard (collecte manuelle)"
+
+#: views/action-settings/options.php:116
+msgid "Gateway(s)"
+msgstr "Passerelle(s)"
+
+#: views/action-settings/options.php:147
+msgid "Bank Account Details"
+msgstr "Détails du compte bancaire"
+
+#: views/action-settings/options.php:153
+msgid "Routing Number"
+msgstr "Numéro de routage"
+
+#: views/action-settings/options.php:159
+msgid "Account Number"
+msgstr "Numéro de compte"
+
+#: views/action-settings/options.php:165
+msgid "Bank Name"
+msgstr "Nom de la banque"
+
+#: views/action-settings/options.php:202
+#: views/action-settings/options.php:245
+msgid "Company"
+msgstr "Entreprise"
+
+#: views/action-settings/options.php:210
+msgid "Shipping Information"
+msgstr "Informations de livraison"
+
+#: views/action-settings/options.php:211
+msgid "Select the fields to associate with the customer shipping information."
+msgstr "Sélectionnez les champs à associer aux informations de livraison du client."
+
+#: views/action-settings/options.php:216
+msgid "Shipping"
+msgstr "Livraison"
+
+#: views/action-settings/options.php:219
+msgid "Collect shipping information with this form"
+msgstr "Collecter les informations de livraison avec ce formulaire"
+
+#: views/action-settings/options.php:252
+msgid "After Payment"
+msgstr "Après le paiement"
+
+#: views/action-settings/options.php:253
+msgid "Change a field value when the status of a payment changes."
+msgstr "Changez une valeur de champ lorsque l’état d’un paiement change."
+
+#: views/action-settings/options.php:259
+msgid "Add"
+msgstr "Ajouter"
+
+#: views/action-settings/options.php:266
+msgid "Payment Status"
+msgstr "État du paiement"
+
+#: views/action-settings/options.php:267
+msgid "Field"
+msgstr "Champ"
+
+#: views/action-settings/options.php:268
+msgid "Value"
+msgstr "Valeur"
+
+#: views/fields/gateway-back-end.php:6
+msgid "Do not delete this field. It will be hidden in your form but is required to process payments."
+msgstr "Ne supprimez pas ce champ. Il sera masqué dans votre formulaire, mais il est nécessaire pour traiter les paiements."
+
+#: views/payments/edit.php:3
+msgid "Edit Payment"
+msgstr "Modifier le paiement"
+
+#: views/payments/edit.php:14
+#: views/payments/new.php:12
+msgid "Publish"
+msgstr "Publier"
+
+#: views/payments/form.php:62
+msgid "Subscription Number:"
+msgstr "Numéro d’abonnement :"
+
+#: views/payments/new.php:3
+msgid "New Payment"
+msgstr "Nouveau paiement"
+
+#. Plugin Name of the plugin
+#: formidable-stripe.php
+msgid "Formidable Stripe"
+msgstr "Formidable Stripe"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: formidable-stripe.php
+msgid "https://formidableforms.com/"
+msgstr "https://formidableforms.com/"
+
+#. Description of the plugin
+#: formidable-stripe.php
+msgid "Collect Stripe payments using your Formidable Forms"
+msgstr "Collecter les paiements Stripe en utilisant vos formulaires Formidable Forms"
+
+#. Author of the plugin
+#: formidable-stripe.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#: controllers/FrmStrpActionsController.php:151
+msgid "The Stripe Token is missing."
+msgstr "Le jeton Stripe est manquant."
+
+#: controllers/FrmStrpPaymentsController.php:38
+msgid "Delete card"
+msgstr "Supprimer la carte"
+
+#: controllers/FrmStrpPaymentsController.php:99
+msgid "Capture now"
+msgstr "Capturer maintenant"
+
+#: controllers/FrmStrpPaymentsController.php:123
+msgid "Captured"
+msgstr "Capturé"
+
+#: controllers/FrmStrpPaymentsController.php:128
+msgid "Oops! No payment was selected for the charge."
+msgstr "Oups ! Aucun paiement à facturer n’a été sélectionné."
+
+#: controllers/FrmStrpSettingsController.php:60
+msgid "Test Publishable Key"
+msgstr "Clé de test publiable"
+
+#: controllers/FrmStrpSettingsController.php:61
+msgid "Test Secret Key"
+msgstr "Clé secrète de test"
+
+#: controllers/FrmStrpSettingsController.php:65
+msgid "Live Publishable Key"
+msgstr "Clé de production publiable"
+
+#: controllers/FrmStrpSettingsController.php:66
+msgid "Live Secret Key"
+msgstr "Clé secrète de production"
+
+#: helpers/FrmStrpApiHelper.php:676
+msgid "The card number is incorrect."
+msgstr "Le numéro de la carte est incorrect."
+
+#: helpers/FrmStrpApiHelper.php:677
+msgid "The card number is not a valid credit card number."
+msgstr "Le numéro de la carte n’est pas un numéro de carte bancaire valide."
+
+#: helpers/FrmStrpApiHelper.php:678
+msgid "The card's expiration month is invalid."
+msgstr "Le mois d’expiration de la carte n’est pas valide."
+
+#: helpers/FrmStrpApiHelper.php:679
+msgid "The card's expiration year is invalid."
+msgstr "L’année d’expiration de la carte n’est pas valide."
+
+#: helpers/FrmStrpApiHelper.php:680
+msgid "The card's security code is invalid."
+msgstr "Le code de sécurité de la carte n’est pas valide."
+
+#: helpers/FrmStrpApiHelper.php:681
+msgid "The card has expired."
+msgstr "La carte a expiré."
+
+#: helpers/FrmStrpApiHelper.php:682
+msgid "The card's security code is incorrect."
+msgstr "Le code de sécurité de la carte est incorrect."
+
+#: helpers/FrmStrpApiHelper.php:683
+msgid "The card's zip code failed validation."
+msgstr "Le code postal de la carte n’a pas été validé."
+
+#: helpers/FrmStrpApiHelper.php:684
+msgid "The card was declined."
+msgstr "La carte a été refusée."
+
+#: helpers/FrmStrpApiHelper.php:685
+msgid "There is no card on a customer that is being charged."
+msgstr "Il manque une carte pour un client qui est en train d’être facturé."
+
+#: helpers/FrmStrpApiHelper.php:686
+msgid "An error occurred while processing the card."
+msgstr "Une erreur s’est produite lors du traitement de la carte."
+
+#: helpers/FrmStrpApiHelper.php:687
+msgid "An error occurred due to requests hitting the API too quickly. Please let us know if you're consistently running into this error."
+msgstr "Une erreur est survenue en raison de demandes envoyées à l’API trop rapidement. Veuillez nous informer si vous rencontrez constamment cette erreur."
+
+#: helpers/FrmStrpApiHelper.php:688
+msgid "The card's swipe data is invalid."
+msgstr "Les données de glissement de la carte ne sont pas valides."
+
+#: helpers/FrmStrpApiHelper.php:689
+msgid "Too many requests hit the API too quickly."
+msgstr "Trop de demandes ont été envoyées à l’API trop rapidement."
+
+#: helpers/FrmStrpApiHelper.php:690
+msgid "Invalid request errors arise when your request has invalid parameters."
+msgstr "Des erreurs de demande non valide surviennent lorsque votre demande contient des paramètres non valides."
+
+#: helpers/FrmStrpApiHelper.php:691
+msgid "Failed to properly authenticate in the request."
+msgstr "Échec d’authentification dans la demande."
+
+#: helpers/FrmStrpApiHelper.php:692
+msgid "Failed to connect to Stripe's API. This usually means you have an issue with TLS 1.2 on your server."
+msgstr "Échec de la connexion à l’API Stripe. Cela signifie généralement que vous avez un problème avec TLS 1.2 sur votre serveur."
+
+#: helpers/FrmStrpConnectHelper.php:782
+msgid "Unable to delete card"
+msgstr "Impossible de supprimer la carte"
+
+#. translators: %1$s: Anchor open tag, %2$s: Anchor close tag.
+#: views/action-settings/options.php:35
+msgid "Enable %1$sStripe link%2$s and additional payment methods."
+msgstr "Activez le %1$s lien Stripe%2$s et des moyens de paiement supplémentaires."
+
+#: views/payments/manage-cards.php:4
+msgid "Card ending in"
+msgstr "Carte se terminant par"
+
+#: views/payments/manage-cards.php:5
+msgid "Expires"
+msgstr "Expire"
+
+#: views/payments/sidebar_actions.php:7
+msgid "Authorized:"
+msgstr "Autorisé :"
+
+#: views/settings/form.php:4
+msgid "Process One-time Payments"
+msgstr "Traiter les paiements uniques"
+
+#: views/settings/form.php:9
+msgid "Before entry is created."
+msgstr "Avant la création de l’entrée."
+
+#: views/settings/form.php:13
+msgid "After entry is created."
+msgstr "Après la création de l’entrée."
+
+#: views/settings/form.php:14
+msgid "Select if your site is using conditional logic on the payment form action or PHP customizations to set the price. If a form has multiple payment form actions, choose this option."
+msgstr "Sélectionnez cette option votre site utilise une logique conditionnelle sur l’action de formulaire de paiement ou des personnalisations PHP pour définir le prix ou si un formulaire a plusieurs actions de formulaires de paiement."
+
+#: views/settings/form.php:43
+msgid "After June, Stripe will no longer allow keys."
+msgstr "Après juin, Stripe n’autorisera plus les clés."
+
+#: views/settings/form.php:45
+msgid "Stripe no longer supports API keys. Support for API keys will be fully removed in the next release of Formidable Stripe."
+msgstr "Stripe ne prend plus en charge les clés d’API. Cette prise en charge sera totalement supprimée dans la prochaine version de Formidable Stripe."
+
+#: views/settings/form.php:63
+msgid "Automatic Processing"
+msgstr "Traitement automatique"
+
+#: views/settings/form.php:66
+msgid "Stripe notifies your site of any recurring payments, refunds issued, and failed payments. In order to receive these notifications, you must add a new Webhook URL for your site in your Stripe Dashboard > Settings > Webhooks. The URL should be set to:"
+msgstr "Stripe notifie votre site de tous les paiements récurrents, les remboursements émis et les paiements échoués. Pour recevoir ces notifications, vous devez ajouter une nouvelle URL de crochet web pour votre site dans votre Tableau de bord Stripe > Réglages > Crochets web. L’URL doit être définie sur :"
+

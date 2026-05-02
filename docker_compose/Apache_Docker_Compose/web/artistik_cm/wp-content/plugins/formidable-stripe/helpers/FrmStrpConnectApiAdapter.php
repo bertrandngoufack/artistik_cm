@@ -1,0 +1,275 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'You are not allowed to call this page directly.' );
+}
+
+/**
+ * The majority of Stripe Connect logic lies in FrmStrpConnectHelper
+ * The purpose of this Adapter is to mirror FrmStrpApiHelper's interface
+ */
+class FrmStrpConnectApiAdapter {
+
+	/**
+	 * @return bool
+	 */
+	public static function initialize_api() {
+		return FrmStrpConnectHelper::stripe_connect_is_setup();
+	}
+
+	/**
+	 * @param string $sub_id
+	 * @return bool
+	 */
+	public static function cancel_subscription( $sub_id ) {
+		if ( current_user_can( 'administrator' ) ) {
+			$customer_id = false;
+		} else {
+			$user_id  = get_current_user_id();
+			$customer = self::get_customer_by_id( $user_id );
+			if ( ! is_object( $customer ) ) {
+				return false;
+			}
+			$customer_id = $customer->id;
+		}
+		return FrmStrpConnectHelper::cancel_subscription( $sub_id, $customer_id );
+	}
+
+	/**
+	 * @param string $payment_id
+	 * @return bool
+	 */
+	public static function refund_payment( $payment_id ) {
+		return FrmStrpConnectHelper::refund_payment( $payment_id );
+	}
+
+	/**
+	 * Get the payment intent from Stripe
+	 *
+	 * @param string $payment_id
+	 * @return mixed
+	 */
+	public static function get_intent( $payment_id ) {
+		return FrmStrpConnectHelper::get_intent( $payment_id );
+	}
+
+	/**
+	 * Check if a charge has already be authorized
+	 *
+	 * @param string $charge_id
+	 * @return bool
+	 */
+	public static function can_by_captured( $charge_id ) {
+		return FrmStrpConnectHelper::can_by_captured( $charge_id );
+	}
+
+	/**
+	 * @param string $charge_id
+	 * @return boolean
+	 */
+	public static function capture_charge( $charge_id ) {
+		return FrmStrpConnectHelper::capture_charge( $charge_id );
+	}
+
+	/**
+	 * @return array
+	 */
+	public static function get_customer_subscriptions() {
+		return FrmStrpConnectHelper::get_customer_subscriptions();
+	}
+
+	/**
+	 * @param array $options
+	 * @return mixed
+	 */
+	public static function get_customer( $options = array() ) {
+		$user_id   = ! empty( $options['user_id'] ) ? $options['user_id'] : get_current_user_id();
+		$meta_name = FrmStrpAppHelper::get_customer_id_meta_name();
+
+		if ( $user_id ) {
+			$customer_id = get_user_meta( $user_id, $meta_name, true );
+			if ( ! isset( $options['email'] ) ) {
+				$user_info = get_userdata( $user_id );
+				if ( is_object( $user_info ) && ! empty( $user_info->user_email ) ) {
+					$options['email'] = $user_info->user_email;
+				}
+			}
+			if ( $customer_id ) {
+				$options['customer_id'] = $customer_id;
+			}
+		}
+
+		if ( isset( $options['user_id'] ) ) {
+			unset( $options['user_id'] );
+		}
+
+		$a_customer_id_value_was_previously_set = ! empty( $customer_id );
+		$customer_id                            = FrmStrpConnectHelper::get_customer_id( $options );
+
+		if ( $customer_id ) {
+			$customer_id_is_actually_an_error_message = false === strpos( $customer_id, 'cus_' );
+			if ( $customer_id_is_actually_an_error_message ) {
+				$customer_id_error_message = $customer_id;
+				$customer_id               = false;
+			}
+		}
+
+		if ( ! $customer_id ) {
+			if ( $a_customer_id_value_was_previously_set ) {
+				delete_user_meta( $user_id, $meta_name );
+			}
+
+			if ( ! empty( $customer_id_error_message ) ) {
+				return $customer_id_error_message;
+			}
+
+			return __( 'Unable to retrieve customer through Stripe Connect.', 'formidable' );
+		}
+
+		if ( $user_id ) {
+			update_user_meta( $user_id, $meta_name, $customer_id );
+		}
+
+		return self::create_decoy_customer( $customer_id );
+	}
+
+	/**
+	 * @param string $customer_id
+	 * @return object
+	 */
+	private static function create_decoy_customer( $customer_id ) {
+		$decoy_object       = new stdClass();
+		$decoy_object->id   = $customer_id;
+		$decoy_object->type = 'customer';
+		return $decoy_object;
+	}
+
+	/**
+	 * @param int $user_id
+	 * @return mixed
+	 */
+	public static function get_customer_by_id( $user_id ) {
+		$meta_name   = FrmStrpAppHelper::get_customer_id_meta_name();
+		$customer_id = get_user_meta( $user_id, $meta_name, true );
+
+		if ( ! $customer_id ) {
+			return false;
+		}
+
+		if ( ! FrmStrpConnectHelper::validate_customer( $customer_id ) ) {
+			delete_user_meta( $user_id, $meta_name );
+			return false;
+		}
+
+		return self::create_decoy_customer( $customer_id );
+	}
+
+	/**
+	 * @param int $user_id
+	 * @return object|array
+	 */
+	public static function get_cards( $user_id ) {
+		return FrmStrpConnectHelper::get_cards( $user_id );
+	}
+
+	/**
+	 * @param string $card_id
+	 * @return array response
+	 */
+	public static function delete_card( $card_id ) {
+		$user_id  = get_current_user_id();
+		$customer = self::get_customer_by_id( $user_id );
+		return FrmStrpConnectHelper::delete_card( $customer->id, $card_id );
+	}
+
+	/**
+	 * @param string $event_id
+	 * @return mixed
+	 */
+	public static function get_event( $event_id ) {
+		return FrmStrpConnectHelper::get_event( $event_id );
+	}
+
+	/**
+	 * @param array $plan
+	 */
+	public static function maybe_create_plan( $plan ) {
+		return FrmStrpConnectHelper::maybe_create_plan( $plan );
+	}
+
+	/**
+	 * @param array $new_charge
+	 * @return Stripe\Subscription|string|false
+	 */
+	public static function create_subscription( $new_charge ) {
+		return FrmStrpConnectHelper::create_subscription( $new_charge );
+	}
+
+	/**
+	 * @param array $new_charge
+	 * @return Stripe\PaymentIntent|string|false
+	 */
+	public static function run_new_charge( $new_charge ) {
+		return FrmStrpConnectHelper::run_new_charge( $new_charge );
+	}
+
+	/**
+	 * @param array $new_charge
+	 * @return mixed
+	 */
+	public static function create_intent( $new_charge ) {
+		return FrmStrpConnectHelper::create_intent( $new_charge );
+	}
+
+	/**
+	 * @param string $intent_id
+	 * @param array  $data
+	 * @return mixed
+	 */
+	public static function update_intent( $intent_id, $data ) {
+		return FrmStrpConnectHelper::update_intent( $intent_id, $data );
+	}
+
+	/**
+	 * @param string $intent_id
+	 * @param array  $data
+	 * @return mixed
+	 */
+	public static function confirm_intent( $intent_id, $data ) {
+		return FrmStrpConnectHelper::confirm_intent( $intent_id, $data );
+	}
+
+	/**
+	 * @param string $intent_id
+	 * @param array  $data
+	 * @return object|string|false
+	 */
+	public static function capture_intent( $intent_id, $data ) {
+		return FrmStrpConnectHelper::capture_intent( $intent_id, $data );
+	}
+
+	/**
+	 * Create a setup intent for a Stripe link recurring payment.
+	 * This is called when a form is loaded.
+	 *
+	 * @since 3.0
+	 *
+	 * @param string      $customer_id Customer ID beginning with cus_.
+	 * @param array|false $payment_method_types If false the types will defaults to array( 'card', 'link' ).
+	 * @return object|string|false
+	 */
+	public static function create_setup_intent( $customer_id, $payment_method_types = false ) {
+		return FrmStrpConnectHelper::create_setup_intent( $customer_id, $payment_method_types );
+	}
+
+	/**
+	 * Get a setup intent (used for Stripe link recurring payments).
+	 *
+	 * @since 3.0
+	 *
+	 * @param string $setup_id
+	 * @return object|string|false
+	 */
+	public static function get_setup_intent( $setup_id ) {
+		return FrmStrpConnectHelper::get_setup_intent( $setup_id );
+	}
+}

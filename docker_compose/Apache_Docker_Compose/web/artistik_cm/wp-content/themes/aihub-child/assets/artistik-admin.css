@@ -1,0 +1,32 @@
+/* Page d’aide « Artistik » + écrans CPT solution */
+.ak-help { max-width: 1100px; }
+.ak-help-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 16px;
+	margin: 24px 0 32px;
+}
+.ak-help-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 18px 20px;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.ak-help-card h2 {
+	margin-top: 0;
+	font-size: 1.1rem;
+	color: #1d2327;
+}
+.ak-help-card p { color: #50575e; }
+.ak-help pre {
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	padding: 14px 16px;
+	font-size: 13px;
+	max-width: 720px;
+}
+
+.ak-admin-grid p { margin: 14px 0; }
+.ak-admin-grid .description { color: #646970; }
