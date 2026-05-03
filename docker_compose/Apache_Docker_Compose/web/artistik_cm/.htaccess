@@ -1,3 +1,8 @@
+# Docker / local : WP_PUBLIC_URL = http://localhost:PORT/artistik_cm/ (.env APACHE_DOCUMENT_ROOT = ./web)
+# Les URLs TranslatePress (/en/, …) DOIVENT être réécrites vers artistik_cm/index.php — pas vers /index.php (page statut Docker).
+#
+# Production à la racine du domaine : utiliser .htaccess.production-root.example à la place.
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On

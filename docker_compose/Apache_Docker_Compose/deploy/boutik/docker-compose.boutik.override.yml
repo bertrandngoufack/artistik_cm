@@ -1,0 +1,33 @@
+# Override Compose pour exposer l'application Laravel "Boutik" (UltimatePOS)
+# en plus du site WordPress existant, sur la même stack artistik-php.
+#
+# Usage :
+#   cd docker_compose/Apache_Docker_Compose
+#   docker compose \
+#     -f docker-compose.yml \
+#     -f deploy/boutik/docker-compose.boutik.override.yml \
+#     up -d
+#
+# Effets :
+#   - Monte la conf Apache d'alias /boutik (lecture seule, idempotent)
+#   - Aucune modification du compose principal
+#   - Le service `mariadb` est partagé : la base "boutik_db" cohabite avec
+#     "artistik_cm_db". Le user "boutik_user" est créé via install.sh.
+
+services:
+  web:
+    volumes:
+      - ./deploy/boutik/apache/boutik.conf:/etc/apache2/conf-enabled/boutik.conf:ro
+
+  # Le healthcheck par défaut "healthcheck.sh --connect" se connecte en root
+  # SANS mot de passe, donc échoue dès que le volume MariaDB a déjà un root
+  # protégé (cas ici). On le remplace par un mariadb-admin ping authentifié.
+  mariadb:
+    healthcheck:
+      test:
+        - "CMD-SHELL"
+        - "mariadb-admin ping -uroot -p\"$$MYSQL_ROOT_PASSWORD\" --silent || exit 1"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s

@@ -1,0 +1,16 @@
+# À utiliser uniquement si WordPress est servi depuis un sous-dossier URL
+# Ex. : http://localhost:8080/artistik_cm/
+# Copier vers .htaccess en local après un pull :
+#   cp .htaccess.docker-subdirectory.example .htaccess
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /artistik_cm/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /artistik_cm/index.php [L]
+</IfModule>
+# END WordPress

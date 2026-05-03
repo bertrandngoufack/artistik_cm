@@ -8,7 +8,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -19,11 +19,11 @@
 		<a class="navbar-item has-text-weight-bold" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 			Artistik
 		</a>
-		<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="artistik-nav">
+		<button type="button" class="navbar-burger" aria-label="<?php esc_attr_e( 'Menu', 'artistik-cm' ); ?>" aria-controls="artistik-nav" aria-expanded="false" data-target="artistik-nav">
 			<span aria-hidden="true"></span>
 			<span aria-hidden="true"></span>
 			<span aria-hidden="true"></span>
-		</a>
+		</button>
 	</div>
 	<div id="artistik-nav" class="navbar-menu">
 		<div class="navbar-start">
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		burger.addEventListener('click', function() {
 			burger.classList.toggle('is-active');
 			nav.classList.toggle('is-active');
+			var expanded = burger.classList.contains('is-active');
+			burger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
 		});
 	}
 });

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ARTISTIK_AIHUB_CHILD_VER', '2.4.0' );
+define( 'ARTISTIK_AIHUB_CHILD_VER', '2.6.3' );
 
 /* -------------------------------------------------------------
  * Chargement des assets
@@ -47,6 +47,24 @@ function artistik_aihub_child_admin_assets( string $hook ): void {
 	);
 }
 add_action( 'admin_enqueue_scripts', 'artistik_aihub_child_admin_assets' );
+
+/*
+ * TranslatePress : ne pas passer par le moteur de traduction DOM sur les confirmations / erreurs
+ * Formidable du bloc contact — sinon le texte d’email (FR) est traité comme des « chaînes régulières »
+ * et peut déclencher des notices PHP dans class-query.php (insert_strings) sur la partie /en/.
+ */
+add_filter(
+	'trp_no_translate_selectors',
+	static function ( $selectors ) {
+		$selectors[] = '.ak-contact-form .frm_message';
+		$selectors[] = '.ak-contact-form .frm_message_pos';
+		$selectors[] = '.ak-contact-form .frm_error_style';
+		$selectors[] = '.ak-contact-form .frm_error';
+		return array_values( array_unique( $selectors ) );
+	},
+	10,
+	2
+);
 
 /* -------------------------------------------------------------
  * CPT « Solution »
@@ -1426,8 +1444,23 @@ add_action( 'after_setup_theme', 'artistik_register_menus' );
 
 /* -------------------------------------------------------------
  * Sélecteur de langue maison (FR / EN) — sans dépendance JS
- * Lit la configuration TranslatePress et génère 2 boutons inline.
+ * Lit la configuration TranslatePress et génère des liens équivalents à la page courante.
  * ------------------------------------------------------------- */
+
+/**
+ * Instance du convertisseur d’URLs TranslatePress si le plugin est chargé.
+ */
+function artistik_trp_url_converter() {
+	if ( ! class_exists( 'TRP_Translate_Press', false ) ) {
+		return null;
+	}
+	$trp = TRP_Translate_Press::get_trp_instance();
+	if ( ! $trp || ! method_exists( $trp, 'get_component' ) ) {
+		return null;
+	}
+	$converter = $trp->get_component( 'url_converter' );
+	return ( is_object( $converter ) && method_exists( $converter, 'get_url_for_language' ) ) ? $converter : null;
+}
 
 /**
  * Retourne l'URL canonique du site (sans préfixe de langue), peu importe la
@@ -1476,12 +1509,20 @@ function artistik_get_languages(): array {
 	$flags_dir = WP_PLUGIN_URL . '/translatepress-multilingual/assets/flags/4x3/';
 	$base      = artistik_canonical_base_url();
 
+	$converter = artistik_trp_url_converter();
 	$out = array();
 	foreach ( $publish as $code ) {
 		$slug = isset( $slugs[ $code ] ) ? (string) $slugs[ $code ] : strtolower( substr( $code, 0, 2 ) );
-		$url  = $base;
-		if ( $code !== $default ) {
-			$url = $base . $slug . '/';
+
+		if ( $converter ) {
+			// Même logique que le switcher TranslatePress : conserver chemin et paramètres.
+			$url = $converter->get_url_for_language( $code, false, '' );
+			$url = is_string( $url ) ? $url : '';
+		} else {
+			$url  = $base;
+			if ( $code !== $default ) {
+				$url = $base . $slug . '/';
+			}
 		}
 		$out[ $code ] = array(
 			'code'   => $code,
@@ -1495,12 +1536,20 @@ function artistik_get_languages(): array {
 }
 
 /**
- * Détecte la langue actuellement affichée à partir de l'URL (slug /en/).
+ * Détecte la langue actuellement affichée (priorité TranslatePress puis slug d’URL).
  */
 function artistik_current_language(): string {
 	$settings = get_option( 'trp_settings', array() );
 	$default  = isset( $settings['default-language'] ) ? (string) $settings['default-language'] : 'fr_FR';
 	$slugs    = isset( $settings['url-slugs'] ) && is_array( $settings['url-slugs'] ) ? $settings['url-slugs'] : array();
+
+	$converter = artistik_trp_url_converter();
+	if ( $converter && method_exists( $converter, 'get_lang_from_url_string' ) ) {
+		$lang = $converter->get_lang_from_url_string();
+		if ( is_string( $lang ) && $lang !== '' ) {
+			return $lang;
+		}
+	}
 
 	$req = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
 	$req = '/' . trim( wp_parse_url( $req, PHP_URL_PATH ) ?: '', '/' ) . '/';
@@ -1525,40 +1574,26 @@ function artistik_lang_switcher_html(): string {
 	$out = '<div class="ak-lang" role="group" aria-label="' . esc_attr__( 'Sélecteur de langue', 'aihub-child-artistik' ) . '" data-no-translation>';
 	foreach ( $langs as $code => $info ) {
 		$active = ( $code === $current );
+		/* translators: %s: target language native name (e.g. English, Français). */
+		$inactive_label = sprintf( __( 'Afficher la version %s', 'aihub-child-artistik' ), $info['native'] );
 		$out .= sprintf(
 			'<a class="ak-lang-item%1$s" href="%2$s" hreflang="%3$s" lang="%3$s" title="%4$s" data-no-translation data-trp-link-no-replace="true"%5$s>'
 			. '<img class="ak-lang-flag" src="%6$s" alt="" width="20" height="14" loading="lazy" />'
 			. '<span class="ak-lang-name" data-no-translation>%4$s</span>'
 			. '</a>',
-			$active ? ' is-active" aria-current="true' : '',
+			$active ? ' is-active' : '',
 			esc_url( $info['url'] ),
 			esc_attr( str_replace( '_', '-', $code ) ),
 			esc_html( $info['native'] ),
-			$active ? ' aria-label="' . esc_attr( sprintf( /* translators: %s: language name */ __( 'Langue actuelle : %s', 'aihub-child-artistik' ), $info['native'] ) ) . '"' : '',
+			$active
+				? ' aria-current="true" tabindex="-1" aria-label="' . esc_attr( sprintf( /* translators: %s: language name */ __( 'Langue actuelle : %s', 'aihub-child-artistik' ), $info['native'] ) ) . '"'
+				: ' aria-label="' . esc_attr( $inactive_label ) . '"',
 			esc_url( $info['flag'] )
 		);
 	}
 	$out .= '</div>';
 	return $out;
 }
-
-/**
- * Garde-fou : empêche TranslatePress de toucher aux URLs des items du sélecteur.
- * On filtre la liste des liens sortants juste avant la réécriture.
- */
-add_filter( 'trp_skip_url', function ( $skip, $url ) {
-	if ( ! is_string( $url ) ) { return $skip; }
-	$settings = get_option( 'trp_settings', array() );
-	$slugs    = isset( $settings['url-slugs'] ) && is_array( $settings['url-slugs'] ) ? $settings['url-slugs'] : array();
-	$default  = isset( $settings['default-language'] ) ? (string) $settings['default-language'] : 'fr_FR';
-	foreach ( $slugs as $code => $slug ) {
-		if ( $code === $default || ! $slug ) { continue; }
-		if ( preg_match( '#/' . preg_quote( $slug, '#' ) . '/?$#', $url ) ) {
-			return true;
-		}
-	}
-	return $skip;
-}, 10, 2 );
 
 /* -------------------------------------------------------------
  * SMTP : ajustements PHPMailer (HELO valide, debug optionnel)

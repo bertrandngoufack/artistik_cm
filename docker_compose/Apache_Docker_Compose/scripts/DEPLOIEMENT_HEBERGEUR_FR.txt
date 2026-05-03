@@ -1,0 +1,70 @@
+═══════════════════════════════════════════════════════════════════
+  Artistik_CM — paquet pour hébergement mutualisé / VPS avec Apache+PHP
+  Contenu :
+    • fichiers_artistik_cm.tar.gz  — dossier WordPress artistik_cm
+    • database_complete.sql        — base MariaDB/MySQL exportée complète
+  Préfixe des tables WordPress dans ce projet : wp_
+═══════════════════════════════════════════════════════════════════
+
+1) Préparation côté hébergeur
+   - Créer une base MySQL/MariaDB + un utilisateur avec tous les droits sur cette base.
+   - Noter : hôte (souvent localhost ou mysql.hébergeur.cm), nom de la base, utilisateur, mot de passe.
+   - Vérifier PHP ≥ 8.x (aligné sur votre image locale 8.4 si possible) et extensions usuelles WordPress.
+
+2) Fichiers
+   - Téléverser fichiers_artistik_cm.tar.gz sur l’hébergement (FTP/SFTP/File Manager).
+   - Extraire l’archive à l’emplacement voulu, par exemple :
+       public_html/artistik_cm/   ← si URL = https://votredomaine.cm/artistik_cm/
+       public_html/              ← si le site doit être à la racine du domaine
+     Après extraction, wp-config.php doit se trouver au bon niveau avec index.php à côté.
+
+2 bis) .htaccess et langues (TranslatePress, /en/, etc.)
+   - Si le site est à la racine (ex. https://www.artistik.cm/), le fichier .htaccess doit
+     contenir RewriteBase / et RewriteRule . /index.php [L] (comme dans le dépôt après maj).
+   - Si vous aviez développé sous un sous-dossier (/artistik_cm/), un ancien .htaccess peut
+     encore pointer vers RewriteBase /artistik_cm/ → les URLs /en/ renvoient alors 404 chez
+     l’hébergeur : remplacer par la version « racine » ou aller dans Réglages → Permaliens
+     → Enregistrer pour régénérer.
+   - mod_rewrite doit être actif et AllowOverride doit autoriser les .htaccess (souvent déjà
+     le cas sur mutualisé).
+
+3) Importer la base
+   - Ouvrir phpMyAdmin de l’hébergeur (ou équivalent).
+   - Sélectionner la base créée à l’étape 1.
+   - Importer database_complete.sql (fichier complet, aucune coupe).
+   - Laisser terminer jusqu’à message de succès (peut prendre plusieurs minutes selon taille).
+
+4) wp-config.php sur le serveur
+   - Adapter dans wp-config.php (à la racine du site déployé) :
+       DB_NAME, DB_USER, DB_PASSWORD, DB_HOST
+     Ne pas modifier le préfixe des tables wp_ sauf si votre dump utilise un autre préfixe.
+
+5) URLs du site — OBLIGATOIRE avant mise en ligne
+   - En local vos URLs peuvent être http://localhost:8080 ou similaires.
+   - En production, WordPress doit connaître la nouvelle URL (site_url / home dans wp_options
+     et données sérialisées dans tout le contenu).
+   - Réglages → Général : « Adresse web de WordPress » et « Adresse web du site » =
+     https://www.artistik.cm (sans /artistik_cm si le site est à la racine).
+   - Si un lien « Accueil » ou le logo pointe encore vers localhost:8080 : ce sont souvent des
+     entrées de menu (lien personnalisé) ou du contenu Elementor en base. Installez « Better Search
+     Replace », faites un essai à blanc puis remplacez par exemple :
+       http://localhost:8080/artistik_cm  →  https://www.artistik.cm
+       http://localhost:8080              →  https://www.artistik.cm
+     (selon l’URL exacte utilisée en dev). Vérifiez aussi Elementor → Outils → Remplacer l’URL.
+     Ne faites pas un remplacement brut sur le fichier .sql après coup sans outil adapté aux données sérialisées.
+   - Option technique : variable d’environnement PHP ARTISTIK_CM_SITE_URL=https://www.artistik.cm
+     (supportée par wp-config du dépôt) pour forcer WP_HOME / WP_SITEURL tant que la base n’est
+     pas entièrement corrigée.
+   - Avec SSH : WP-CLI `wp search-replace` (avec les mêmes paires d’URLs qu’avec Better Search Replace).
+
+6) Après transfert
+   - Se connecter à /wp-admin, regénérer les permaliens : Réglages → Permaliens → Enregistrer.
+   - Vérifier les réglages de GoSMTP / SMTP sur l’hebergeur (ports 465/587 ou selon votre FAI).
+   - Droits fichiers usuels : dossiers 755, fichiers 644 ; wp-config.php en lecture seule pour le serveur.
+
+7) Sécurité du paquet de sauvegarde
+   - Ce dossier contient la base ET les fichiers : ne pas les laisser en téléchargement public.
+   - Stocker hors webroot ou sur support chiffré ; supprimer après déploiement réussi si besoin.
+
+Besoin de refaire cette archive depuis la machine dev :
+  ./manage.sh backup-deploy

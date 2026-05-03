@@ -488,12 +488,10 @@ class TRP_Query{
                 $this->db->query("INSERT INTO `$originals_table` (original) VALUES " . implode(',', $insert_strings));
             }
 
-            //get the ids for all the new strings (new in dictionary)
+            // get the ids for all resolved originals (avoid returning [] when counts differ: long DOM strings, BINARY edge cases — PHP 8 notices in insert_strings).
             $new_strings_in_dictionary_with_original_id = $this->db->get_results( "SELECT original,id FROM `$originals_table` WHERE BINARY $originals_table.original IN (".implode( ',', $possible_new_strings ).")", OBJECT_K );
 
-            if( count( $new_strings_in_dictionary_with_original_id ) === count( $new_strings ) ){
-                return $new_strings_in_dictionary_with_original_id;
-            }
+            return is_array( $new_strings_in_dictionary_with_original_id ) ? $new_strings_in_dictionary_with_original_id : array();
         }
 
         return array();
@@ -755,9 +753,17 @@ class TRP_Query{
         //make sure we have the same strings in the original table as well
         $original_inserts = $this->original_strings_sync( $language_code, $new_strings );
 
+        $strings_saved = array();
         foreach ( $new_strings as $string ) {
-            array_push( $values, $string, NULL, self::NOT_TRANSLATED, $block_type, $original_inserts[$string]->id );
+            if ( empty( $original_inserts[ $string ] ) || ! isset( $original_inserts[ $string ]->id ) ) {
+                continue;
+            }
+            array_push( $values, $string, NULL, self::NOT_TRANSLATED, $block_type, (int) $original_inserts[ $string ]->id );
             $place_holders[] = "('%s','%s','%d','%d', %d)";
+            $strings_saved[] = $string;
+        }
+        if ( count( $place_holders ) === 0 ) {
+            return;
         }
 		$query .= implode( ', ', $place_holders );
 
@@ -768,7 +774,7 @@ class TRP_Query{
             $trp = TRP_Translate_Press::get_trp_instance();
             $this->check_invalid_text = $trp->get_component( 'check_invalid_text' );
         }
-        $this->check_invalid_text->insert_translations_without_invalid_text($new_strings, $language_code, $block_type);
+        $this->check_invalid_text->insert_translations_without_invalid_text( $strings_saved, $language_code, $block_type );
         $this->maybe_record_automatic_translation_error(array( 'details' => 'Error running insert_strings()' ) );
     }
 

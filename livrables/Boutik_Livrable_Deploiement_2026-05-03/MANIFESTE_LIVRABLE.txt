@@ -1,0 +1,12 @@
+Boutik — Livrable déploiement Artistik
+Référence archive : Boutik_Livrable_Deploiement_2026-05-03
+Date de constitution : 2026-05-03
+
+Contenu :
+- 01_Documentation : 3 fichiers Markdown (audit, procédure, livrable)
+- 02_Paquet_Installation : install.sh, apache/, docker-compose override, scripts/, env.boutik.MODELE
+- 03_Code_Application_Boutik : code Laravel sans vendor/node_modules/.env
+
+Point d'entrée : README_LIVRABLE.md
+
+Conformité : procédure alignée sur web/Boutik/docs/Boutik/03_LIVRABLE_DEPLOIEMENT.md (copie dans 01_Documentation).

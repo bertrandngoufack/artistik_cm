@@ -29,14 +29,26 @@ define( 'WP_DEBUG', false );
 define( 'FS_METHOD', 'direct' );
 
 /**
- * URL publiques si WordPress est dans un sous-dossier (ex. /artistik_cm/).
- * Définir WP_PUBLIC_URL dans .env Docker (voir docker-compose).
+ * URL publiques : priorité 1 prod (hébergement), 2 sous-dossier Docker (.env WP_PUBLIC_URL), sinon valeurs en base.
+ * Sur votre hébergeur vous pouvez fixer avant la mise en ligne correcte du SQL :
+ *   ARTISTIK_CM_SITE_URL=https://www.artistik.cm
+ * dans l’env PHP qui lit ce fichier ou un SetEnv Apache autorisé.
  */
+$wp_prod_url = getenv( 'ARTISTIK_CM_SITE_URL' );
 $wp_public_url = getenv( 'WP_PUBLIC_URL' );
-if ( is_string( $wp_public_url ) && $wp_public_url !== '' ) {
+
+if ( is_string( $wp_prod_url ) && $wp_prod_url !== '' ) {
+	$wp_prod_url = rtrim( $wp_prod_url, '/' );
+	if ( filter_var( $wp_prod_url, FILTER_VALIDATE_URL ) ) {
+		define( 'WP_HOME', $wp_prod_url );
+		define( 'WP_SITEURL', $wp_prod_url );
+	}
+} elseif ( is_string( $wp_public_url ) && $wp_public_url !== '' ) {
 	$wp_public_url = rtrim( $wp_public_url, '/' );
-	define( 'WP_HOME', $wp_public_url );
-	define( 'WP_SITEURL', $wp_public_url );
+	if ( filter_var( $wp_public_url, FILTER_VALIDATE_URL ) ) {
+		define( 'WP_HOME', $wp_public_url );
+		define( 'WP_SITEURL', $wp_public_url );
+	}
 }
 
 /* Add any custom values between this line and the "That's all" comment. */

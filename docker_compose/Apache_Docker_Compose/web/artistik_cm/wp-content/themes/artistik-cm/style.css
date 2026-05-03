@@ -4,7 +4,7 @@ Theme URI: https://artistik.cm
 Author: Artistik CM
 Author URI: https://artistik.cm
 Description: Thème léger pour Artistik — Bulma en local, pensé pour Elementor et TranslatePress (FR/EN).
-Version: 1.0.0
+Version: 1.0.2
 Requires at least: 6.4
 Tested up to: 6.9
 Requires PHP: 8.1
@@ -28,4 +28,29 @@ body.theme-artistik-cm {
 
 .theme-artistik-cm .navbar.is-artistik {
 	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Contenus : fluidité médias et tableaux (Elementor / éditeur) */
+.theme-artistik-cm .content img,
+.theme-artistik-cm .content video,
+.theme-artistik-cm .content iframe,
+.theme-artistik-cm .content embed,
+.theme-artistik-cm .content object {
+	max-width: 100%;
+	height: auto;
+}
+
+.theme-artistik-cm .content table {
+	display: block;
+	overflow-x: auto;
+	max-width: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+.theme-artistik-cm figure.wp-caption {
+	max-width: 100%;
+}
+
+.theme-artistik-cm body {
+	overflow-x: clip;
 }

@@ -1,3 +1,6 @@
 .env
 data/mariadb/
 backups/
+
+# Artefacts déploiement (SQL complet + vendor dans le tarball : ne pas committer par défaut)
+deploy/artifacts/

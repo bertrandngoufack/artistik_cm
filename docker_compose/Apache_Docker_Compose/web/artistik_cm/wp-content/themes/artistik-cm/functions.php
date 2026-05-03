@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ARTISTIK_CM_VERSION', '1.0.0' );
+define( 'ARTISTIK_CM_VERSION', '1.0.2' );
 
 /**
  * Chargement traductions.

@@ -1,0 +1,14 @@
+# Exemple pour WordPress à la RACINE du domaine (ex. https://www.artistik.cm/)
+# Remplace alors le fichier .htaccess par ce bloc si le site n’est pas sous /artistik_cm/.
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress

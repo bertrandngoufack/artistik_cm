@@ -1,0 +1,45 @@
+================================================================================
+  LIVRABLE DE DÉPLOIEMENT — BOUTIK (Laravel / UltimatePOS rebrand Artistik CM)
+  Archive : LIVRABLE_BOUTIK_2026-05-03
+  Date de constitution : 2026-05-03
+================================================================================
+
+1) Lire en premier :
+     01_DOCUMENTATION/00_INDEX.md
+     01_DOCUMENTATION/PROCEDURE_DEPLOIEMENT_DETAILLEE.md
+     01_DOCUMENTATION/ANNEXE_IDENTIFIANTS_ET_MOTS_DE_PASSE.md
+
+2) Base de données :
+     02_SQL/00_create_database_et_utilisateur.sql   → création DB + user (à exécuter en root)
+     02_SQL/01_boutik_db_full_dump.sql              → export complet boutik_db (schéma + données)
+     02_SQL/README_SQL.md                           → ordre d’import et précautions
+
+3) Infrastructure :
+     03_APACHE/boutik.conf                         → alias /boutik + SetEnv + correctif PHP 8.4
+     04_DOCKER/docker-compose.boutik.override.yml  → montage conf + healthcheck MariaDB
+
+4) Automatisation :
+     05_SCRIPTS/install.sh                         → déploiement idempotent (voir doc)
+     05_SCRIPTS/.env.boutik                        → variables consommées par install.sh
+     05_SCRIPTS/scripts/                           → seeders Cameroun, i18n FR, utilitaires
+
+5) Application Laravel :
+     06_LARAVEL_ENV/.env.reference_boutik          → exemple aligné sur l’environnement livré
+     07_CODE_REFERENCE/public_htaccess.reference  → RewriteBase /boutik/
+
+6) Documentation complémentaire (copie dépôt) :
+     08_DOCUMENTATION_REPO/*.md     → audit, procédure historique, livrable
+
+7) Code source Boutik :
+     Le code applicatif n’est pas dupliqué dans cette archive (volume important : vendor).
+     Il doit être présent dans le dépôt sous :
+       docker_compose/Apache_Docker_Compose/web/Boutik/
+     Après extraction des fichiers, exécuter : composer install --no-dev (production)
+     selon la procédure détaillée.
+
+8) Sécurité : identifiants et mots de passe sont fournis pour environnement labo/démo.
+   Les remplacer impérativement en production et mettre à jour l’annexe.
+
+================================================================================
+  Support : documenter tout changement de mot de passe dans ANNEXE_IDENTIFIANTS
+================================================================================

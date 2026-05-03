@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-labelledby="bt">
+  <title id="bt">Boutik</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490"/>
+      <stop offset="100%" stop-color="#155e75"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+  <path fill="#ffffff" opacity="0.95" d="M22 38h56v4H22zm4 8h48v38H26zm8-14h32v10H34zm0 0c0-6 7-10 16-10s16 4 16 10"/>
+  <rect x="38" y="52" width="10" height="20" rx="1" fill="#155e75"/>
+  <rect x="52" y="54" width="16" height="9" rx="1" fill="#a5f3fc" opacity="0.4"/>
+  <rect x="52" y="65" width="16" height="7" rx="1" fill="#a5f3fc" opacity="0.28"/>
+</svg>

@@ -69,8 +69,26 @@ case "${1:-}" in
     compose down -v
     docker system prune -f
     ;;
+  backup-deploy)
+    TIMESTAMP="$(date +%Y%m%d_%H%M%S)"
+    BACKUP_ROOT="${SCRIPT_DIR}/backups/deploy_artistik_cm_${TIMESTAMP}"
+    WEB_DIR="${WEB_MOUNT:-./web}"
+    WEB_DIR="${WEB_DIR#./}"
+    mkdir -p "$BACKUP_ROOT"
+    echo -e "${COLOR_GREEN}Export SQL…${NC}"
+    compose exec -T mariadb sh -c 'mariadb-dump -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE" --single-transaction --quick --routines --triggers' > "${BACKUP_ROOT}/database_complete.sql"
+    echo -e "${COLOR_GREEN}Archive fichiers ${WEB_DIR}/artistik_cm (sans cache/upgrade)…${NC}"
+    tar --exclude='artistik_cm/wp-content/cache' --exclude='artistik_cm/wp-content/upgrade' \
+      -czf "${BACKUP_ROOT}/fichiers_artistik_cm.tar.gz" -C "${SCRIPT_DIR}/${WEB_DIR}" artistik_cm
+    if [ -f "${SCRIPT_DIR}/scripts/DEPLOIEMENT_HEBERGEUR_FR.txt" ]; then
+      cp "${SCRIPT_DIR}/scripts/DEPLOIEMENT_HEBERGEUR_FR.txt" "${BACKUP_ROOT}/DEPLOIEMENT_HEBERGEUR_FR.txt"
+    fi
+    printf '%s\n' "$BACKUP_ROOT" > "${SCRIPT_DIR}/backups/LATEST_DEPLOY_PATH.txt"
+    echo -e "${COLOR_GREEN}✓ Sauvegarde déploiement prête :${NC} ${BACKUP_ROOT}"
+    ls -lh "$BACKUP_ROOT"
+    ;;
   *)
-    echo "Usage: $0 {start|start-tools|stop|restart|shell|logs|build|config|clean}"
+    echo "Usage: $0 {start|start-tools|stop|restart|shell|logs|build|config|clean|backup-deploy}"
     echo "Variables : fichier ${ENV_FILE} (exemple : cp .env.example .env)"
     exit 1
     ;;
